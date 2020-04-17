@@ -1,0 +1,89 @@
+* {
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+
+div.banniere {
+	
+	background-image:url("../images/norge.png");
+	height:60px;
+	width:95vw;
+	display:flex;
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:auto;
+	padding:190px;
+	
+}	
+
+body {
+	width:95vw;
+}
+
+.image1 {
+	height:320px;
+	width:100%;
+}
+
+
+li a{
+	text-decoration:none;
+	display:block;
+}
+
+.about a {
+	text-decoration:none;
+	color:#D58CFA;
+	font-size:20px;
+	border-collapse:collapse;
+}
+
+.adopt, .purina, .purina1 {
+	display:none;
+}
+
+
+
+															/* Pour faire disparaitre le tableau page fiche Animal  */
+.table3 {
+	display:none;
+}
+
+															/* Pour faire disparaitre le h3 page fiche Animal  */
+
+
+.header1, .header2 {
+	display:none;
+}
+
+															/* Pour laisser le hidden en display en smartphone */
+
+div.hidden {
+	display:none;
+}
+
+																/* Pour faire disparaitre nav smartphone */
+																
+																	
+
+.last {
+	display:none;
+}
+
+
+
+div.change {
+	background-image:url("../images/maine.png");
+	/* height:240px; */
+	/* width:320px; */
+	display:flex;
+	background-repeat:no-repeat;
+	background-position:center;
+	/* margin-left:55px; */
+	/* padding:190px; */
+	padding:auto;
+	
+}
+

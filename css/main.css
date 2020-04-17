@@ -1,0 +1,167 @@
+* {
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+h1 {
+	color:white;
+	text-align:center;
+	border:2px solid white;
+	margin:auto;
+	margin-top:5vh;
+	
+	
+}
+
+body {
+	background-image:url("../images/probe1.jpg");
+}
+
+.banner {
+	background-image:url("../images/banner2.gif");
+	background-size:cover;
+}
+
+/* .section {
+	width:98%;
+	height: 60%;
+	margin: auto;
+	border:2px solid white;
+} */
+
+button {
+	color:white;
+}
+
+.nasa {
+	width:4vw;
+	height:5vh;
+}
+.wrapper {
+	margin-top:3vh;
+	border:1px solid white;
+	width:50%;
+	margin:auto;
+	margin-top:10vh;
+}
+
+.resize {
+	margin-top:4vh;
+	margin:auto;
+	height:65vh;
+	width:75vw;
+}
+
+.resize1 {
+	margin:auto;
+	height:40vh;
+	width:30vw;
+	margin-top:5vh;
+}
+
+.resize2 {
+	margin-top:4vh;
+	margin:auto;
+	height:65vh;
+	width:75vw;
+}
+
+
+h5 {
+	color:black;
+	width:20%;
+	margin:auto;
+	border:1px solid white;
+	background: rgb(233,0,0);
+	background: radial-gradient(circle, rgba(233,0,0,1) 38%, rgba(35,31,96,1) 76%);
+}
+
+h3 {
+	color:white;
+	text-align:center;
+	border:white 1px solid;
+	width:45vh;
+	margin:auto;
+	background-color:black;
+	margin-bottom:2vh;
+	margin-top:2vh;
+}
+
+
+.on {
+	border:2px solid white;
+	width:75%;
+	margin:auto;
+	margin-top:4vh;
+	text-align:center;
+}
+
+p {
+	border:1px solid white;
+	background: rgb(233,0,0);
+	background: radial-gradient(circle, rgba(233,0,0,1) 38%, rgba(35,31,96,1) 76%);
+	text-align:center;
+	color:white;
+	width:60%;
+	margin:auto;
+	margin-bottom:1vh;
+}
+
+.magic{
+	height:40vh;
+	width:40vw;
+	margin-bottom:2vh;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
