@@ -26,20 +26,16 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item">
-<<<<<<< HEAD
-        <a class="nav-link" href="../index.php" style="color:white;"><img src="../images/nasa.png" class="nasa" title="Home"></a>
 
+        <a class="nav-link" href="../index.php" style="color:white;"><img src="./images/nasa.png" class="nasa" title="Home"></a>
 
->>>>>>> Valide
       </li>
 	 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-<<<<<<< HEAD
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="./crud/ajouteranimal.php">Ajouter</a>
-=======
+
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="ajouteranimal.php">Ajouter</a>
->>>>>>> Valide
+
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="updateanimal.php">Modifier</a>
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="deleteanimal.php">Supprimer</a>
 </div>
