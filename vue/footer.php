@@ -1,8 +1,17 @@
 
 
 	<div class="footer-copyright text-center py-3" style="color:white;">© 2018 Copyright:
-
-		<a href="../index.php"><img src="../images/nasa.png" class="nasa" title="Home"></a>
+	<a
+	<?php 
+    if (explode("/",$_SERVER['PHP_SELF'])[2] != "crud") {
+	  echo "href='index.php'><img  src='images/nasa.png'";
+    }
+    else
+    {
+	  echo "href='../index.php'><img  src='../images/nasa.png'";
+    }
+?> 
+		 class="nasa" title="Home"></a>
 	</div>
 
 

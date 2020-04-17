@@ -1,11 +1,12 @@
 <?php
-require 'vue/header.php';
+require '../vue/header.php';
 ?>
 
 <div class="banner">
 	<h1 style="margin-bottom:4vh"> Update Animals</h1>
 	</div>
 
+  
 <form>
   <div class="row">
     <div class="col">
@@ -23,10 +24,10 @@ require 'vue/header.php';
     <div class="col">
       <input type="text" id="force" class="form-control" placeholder="Force">
     </div>
-    <button type="submit" class="btn btn-primary">Add an animal</button>
+    <button type="submit" class="btn btn-primary">Update an animal</button>
   </div>
 </form>
 
 <?php
-require 'vue/footer.php';
+require '../vue/footer.php';
 ?>
