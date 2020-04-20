@@ -22,9 +22,9 @@
     }
 ?> 
 
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<link rel="stylesheet" media="(max-width: 992px)" href="css/tablet.css"/>
-		<link rel="stylesheet" media="(max-width: 576px)" href="css/smartphone.css"/>
+		<link rel="stylesheet" media="(max-width: 576px)" href="css/smartphone.css"/> -->
 
 
 
@@ -61,50 +61,50 @@
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
 
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="ajouteranimal.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/ajouteranimal.php">Ajouter</a>
 
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/updateanimal.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="deleteanimal.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/deleteanimal.php">Supprimer</a>
 </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aliens</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="ajouteralien.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="updatealien.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="deletealien.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/ajouteralien.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/updatealien.php">Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/deletealien.php">Supprimer</a>
 </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minéraux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="ajoutermineral.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="updatemineraux.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="deletemineraux.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/ajoutermineral.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/updatemineraux.php">Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/deletemineraux.php">Supprimer</a>
 </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lieux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="ajouterlieu.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="updatelieu.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="deletelieu.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/ajouterlieu.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/updatelieu.php">Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/deletelieu.php">Supprimer</a>
 </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Végétaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="ajoutervegetal.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="updatevegetal.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="deletevegetal.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/ajoutervegetal.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/updatevegetal.php">Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/deletevegetal.php">Supprimer</a>
 </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Outils</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="ajouteroutil.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="updateoutil.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="deleteoutil.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/ajouteroutil.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/updateoutil.php">Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/deleteoutil.php">Supprimer</a>
 </div>
 </li>
     </ul>
