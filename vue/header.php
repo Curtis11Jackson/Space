@@ -154,22 +154,22 @@
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='updatemineral.php'>";
+              echo "href='updatemineraux.php'>";
             }
             else
             {
-            echo "href='crud/updatemineral.php'>";
+            echo "href='crud/updatemineraux.php'>";
             }
         ?> 
         >Modifier</a>
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='deletemineral.php'>";
+              echo "href='deletemineraux.php'>";
             }
             else
             {
-            echo "href='crud/deletemineral.php'>";
+            echo "href='crud/deletemineraux.php'>";
             }
         ?> 
         >Supprimer</a>
