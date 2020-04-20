@@ -61,51 +61,238 @@
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
 
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/ajouteranimal.php">Ajouter</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='ajouteranimal.php'>";
+            }
+            else
+            {
+            echo "href='crud/ajouteranimal.php'>";
+            }
+        ?> 
+        >Ajouter</a>
 
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/updateanimal.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/deleteanimal.php">Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='updateanimal.php'>";
+            }
+            else
+            {
+            echo "href='crud/updateanimal.php'>";
+            }
+        ?> 
+        >Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='deleteanimal.php'>";
+            }
+            else
+            {
+            echo "href='crud/deleteanimal.php'>";
+            }
+        ?> 
+        >Supprimer</a>
 </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aliens</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/ajouteralien.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/updatealien.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/deletealien.php">Supprimer</a>
-</div>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='ajouteralien.php'>";
+            }
+            else
+            {
+            echo "href='crud/ajouteralien.php'>";
+            }
+        ?> 
+        >Ajouter</a>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='updatealien.php'>";
+            }
+            else
+            {
+            echo "href='crud/updatealien.php'>";
+            }
+        ?> 
+        >Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='deletealien.php'>";
+            }
+            else
+            {
+            echo "href='crud/deletealien.php'>";
+            }
+        ?> 
+        >Supprimer</a>
+      </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Minéraux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/ajoutermineral.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/updatemineraux.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" href="crud/deletemineraux.php">Supprimer</a>
-</div>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='ajoutermineral.php'>";
+            }
+            else
+            {
+            echo "href='crud/ajoutermineral.php'>";
+            }
+        ?> 
+        >Ajouter</a>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='updatemineral.php'>";
+            }
+            else
+            {
+            echo "href='crud/updatemineral.php'>";
+            }
+        ?> 
+        >Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='deletemineral.php'>";
+            }
+            else
+            {
+            echo "href='crud/deletemineral.php'>";
+            }
+        ?> 
+        >Supprimer</a>
+      </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lieux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/ajouterlieu.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/updatelieu.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/deletelieu.php">Supprimer</a>
-</div>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='ajouterlieu.php'>";
+            }
+            else
+            {
+            echo "href='crud/ajouterlieu.php'>";
+            }
+        ?> 
+        >Ajouter</a>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='updatelieu.php'>";
+            }
+            else
+            {
+            echo "href='crud/updatelieu.php'>";
+            }
+        ?> 
+        >Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='deletelieu.php'>";
+            }
+            else
+            {
+            echo "href='crud/deletelieu.php'>";
+            }
+        ?> 
+        >Supprimer</a>
+      </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Végétaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/ajoutervegetal.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/updatevegetal.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/deletevegetal.php">Supprimer</a>
-</div>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='ajoutervegetal.php'>";
+            }
+            else
+            {
+            echo "href='crud/ajoutervegetal.php'>";
+            }
+        ?> 
+        >Ajouter</a>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='updatevegetal.php'>";
+            }
+            else
+            {
+            echo "href='crud/updatevegetal.php'>";
+            }
+        ?> 
+        >Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='deletevegetal.php'>";
+            }
+            else
+            {
+            echo "href='crud/deletevegetal.php'>";
+            }
+        ?> 
+        >Supprimer</a>
+
+      </div>
 </li>
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Outils</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/ajouteroutil.php">Ajouter</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/updateoutil.php">Modifier</a>
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"href="crud/deleteoutil.php">Supprimer</a>
-</div>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='ajouteroutil.php'>";
+            }
+            else
+            {
+            echo "href='crud/ajouteroutil.php'>";
+            }
+        ?> 
+        >Ajouter</a>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='updateoutil.php'>";
+            }
+            else
+            {
+            echo "href='crud/updateoutil.php'>";
+            }
+        ?> 
+        >Modifier</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='deleteoutil.php'>";
+            }
+            else
+            {
+            echo "href='crud/deleteoutil.php'>";
+            }
+        ?> 
+        >Supprimer</a>
+      </div>
 </li>
     </ul>
   </div>
