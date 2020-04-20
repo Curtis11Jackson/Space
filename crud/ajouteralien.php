@@ -1,11 +1,46 @@
 <?php
-require '../vue/header.php';
+require 'vue/header.php';
+
+class Alien
+{
+
+  //connexion à la bdd
+  private $_db;
+
+  public function __construct($db)
+  {
+    $this ->setDb($db);
+  }
+
+  //SETTER
+  public function setDb(PDO $db)
+  {
+    $this->_db = $db;
+  }
+
+  public function add(Alien $alien)
+  {
+    //prepare une requete d'ajout de recette
+    $request = $this->_db->prepare("INSERT INTO alien(nom_alien, race_alien, carac_alien) VALUES (:nom, :race, :carac)");
+    //execute la requette avec un tableau d'association  
+    $request->execute(array(
+      'nom' => $alien->nom_alien(),
+      'race' => $alien->race_alien(),
+      'carac' => $alien->carac_alien()
+    ));
+    // On hydrate l'objet afin que son id deviennt l'id qui vient 
+    //d'être créé
+    $alien->hydrate(array(
+      'id_alien' => $this->_db->lastInsertId()
+    ));
+  }
+}
+
 ?>
 
-
 <div class="banner">
-	<h1 style="margin-bottom:4vh">Add aliens</h1>
-	</div>
+  <h1 style="margin-bottom:4vh">Add aliens</h1>
+</div>
 
 <form method=POST action=scriptalien.php>
   <div class="row">
@@ -24,5 +59,5 @@ require '../vue/header.php';
 
 
 <?php
-require '../vue/footer.php';
+require 'vue/footer.php';
 ?>
