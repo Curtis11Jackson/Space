@@ -59,10 +59,5 @@ class Alien
 
 
 <?php
-<<<<<<< HEAD
 require 'vue/footer.php';
 ?>
-=======
-require '../vue/footer.php';
-?>
->>>>>>> 71b4914a18e6ace784659061504e09e72c3ca812
