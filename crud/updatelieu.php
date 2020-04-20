@@ -1,12 +1,12 @@
 <?php
 
-require 'vue/header.php';
+require '../vue/header.php';
 
 ?>
 	
 
 	<div class="banner">
-	<h1 style="margin-bottom:4vh">Add a Place</h1>
+	<h1 style="margin-bottom:4vh">Modify a Place</h1>
 	</div>
 	
     <form>
@@ -30,6 +30,6 @@ require 'vue/header.php';
 	
 <?php
 
-require 'vue/footer.php';
+require '../vue/footer.php';
 
 ?>

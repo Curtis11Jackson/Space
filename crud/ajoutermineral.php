@@ -1,5 +1,5 @@
 <?php
-require 'vue/header.php';
+require '../vue/header.php';
 ?>
 
 
@@ -21,5 +21,5 @@ require 'vue/header.php';
 
 
 <?php
-require 'vue/footer.php';
+require '../vue/footer.php';
 ?>

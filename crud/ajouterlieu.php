@@ -60,5 +60,5 @@ class Lieu
 
 
 <?php
-require 'vue/footer.php';
+require '../vue/footer.php';
 ?>
