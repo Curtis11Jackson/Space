@@ -2,6 +2,37 @@
 
 require '../vue/header.php';
 
+class Lieu
+{
+    //caractérisé par la connexion à la base de données
+    private $_db; //va être instance de PDO
+
+    public function __construct($db)
+    {
+        $this->setDb($db);
+    }
+
+    //SETTER
+    public function setDb(PDO $db)
+    {
+        $this->_db = $db;
+    }
+
+
+    public function update($lieu)
+    {
+        //prepare une requete UPDATE de lieu par rapport à son ID
+        $request = $this->_db->prepare("UPDATE lieu SET nom_lieu = :nom, topo_lieu = :topo, GPS_lieu = :GPS");
+        //execute la requete avec un tableau d'association
+        $request->execute(array(
+            'nom' => $lieu->nom_lieu(),
+            'topo' => $lieu->topo_lieu(),
+            'GPS' => $lieu->GPS_lieu()
+        ));
+    }
+}
+
+
 ?>
 	
 
