@@ -1,26 +1,56 @@
 <?php
-require 'vue/header.php';
-?>
 
-<div class="banner">
-	<h1 style="margin-bottom:4vh">Vegetals</h1>
-	</div>
+class Recette
+{
+    //définir les attributs
+    private $_id_veg;
+    private $_nom_veg;
 
-<form method=POST action=ajoutVegetal.php>
-  <div class="row">
-    <div class="col">
-      <input type="text" id="name" class="form-control" placeholder="Vegetal name">
-    </div>
-    <div class="col">
-      <input type="text" id="classif" class="form-control" placeholder="Classification">
-    </div>
-    <div class="col">
-      <input type="text" id="taille" class="form-control" placeholder="taille">
-    </div>
-    <button type="submit" class="btn btn-primary">Add a vegetal</button>
-  </div>
-</form>
+    //CONSTRUCTEUR
+    public function __construct(array $donnees)
+    {
+        $this->hydrate($donnees);
+    }
 
-<?php
-require 'vue/footer.php';
+    //Fonction hydratation (pour donner des valeurs aux attributs)
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $key => $value) {
+            $method = 'set' . ucfirst($key);
+        }
+        if (method_exists($this, $method)) {
+            $this->$method($value);
+        }
+    }
+
+    //GETTER
+    public function id_veg()
+    {
+        //retourne l'id de l'ingrédient
+        return $this->_id_veg;
+    }
+
+    public function nom_veg()
+    {
+        //retourne le nom de l'ingrédient
+        return $this->_nom_veg;
+    }
+
+    //SETTER
+    public function setId_veg($id)
+    {
+        $id = (int) $id;
+
+        if ($id > 0) {
+            $this->_id_veg = $id;
+        }
+    }
+
+    public function setNom_veg($nom)
+    {
+        if (is_string($nom)) {
+            $this->_nom_veg = $nom;
+        }
+    }
+}
 ?>
