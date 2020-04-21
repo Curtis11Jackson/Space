@@ -2,13 +2,14 @@
 
 require 'vue/header.php';
 	
-    class Alien 
+    class alien 
 {
 //définition des attributs
 private $_id_alien;
 private $_nom_alien;
 private $_race_alien;
 private $_carac_alien;
+
 
 
 //constructeur
@@ -82,7 +83,6 @@ public function carac_alien()
          $this->_carac_alien = $carac;
      }
  }
-
 
 }
 
