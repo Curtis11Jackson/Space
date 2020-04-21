@@ -1,6 +1,6 @@
 <?php
 
-class Recette
+class Vegetal
 {
     //définir les attributs
     private $_id_veg;

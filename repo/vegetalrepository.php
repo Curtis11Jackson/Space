@@ -1,5 +1,5 @@
 <?php
-class Vegetal
+class VegetalRepository
 {
   private $_db;
 

@@ -1,6 +1,6 @@
 <?php
 
-class Recette
+class Animal
 {
     //définir les attributs
     private $_id_ani;

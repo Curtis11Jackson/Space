@@ -1,6 +1,6 @@
 <?php
 
-class Animal
+class AnimalRepository
 {
   private $_db;
 
