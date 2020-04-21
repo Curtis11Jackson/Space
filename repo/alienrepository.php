@@ -1,6 +1,6 @@
 <?php
 
-class alienrepository
+class AlienRepository
 {
 
   //connexion à la bdd
@@ -17,7 +17,7 @@ class alienrepository
     $this->_db = $db;
   }
 
-  public function add(alien $alien)
+  public function add(Alien $alien)
   {
     //prepare une requete d'ajout de recette
     $request = $this->_db->prepare("INSERT INTO alien(nom_alien, race_alien, carac_alien) VALUES (:nom, :race, :carac)");
@@ -60,7 +60,7 @@ class alienrepository
           $donnees = $request->fetch();
           // on retourne un nouvel objet alien construit
           //avec les donnees récupérer de la BDD
-          return new alien($donnees);
+          return new Alien($donnees);
       }
   }
 

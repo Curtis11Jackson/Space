@@ -2,7 +2,7 @@
 
 require 'vue/header.php';
 	
-    class alien 
+    class Alien 
 {
 //définition des attributs
 private $_id_alien;

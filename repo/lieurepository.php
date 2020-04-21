@@ -1,6 +1,6 @@
 <?php
 
-class lieurepository
+class LieuRepository
 {
 
   //connexion à la bdd
@@ -17,7 +17,7 @@ class lieurepository
     $this->_db = $db;
   }
 
-  public function add(lieu $lieu)
+  public function add(Lieu $lieu)
   {
     //prepare une requete d'ajout de lieu
     $request = $this->_db->prepare("INSERT INTO lieu(nom_lieu, topo_lieu, gps_lieu) VALUES (:nom, :topo, :gps)");
@@ -46,7 +46,7 @@ class lieurepository
           $donnees = $request->fetch();
           // on retourne un nouvel objet alien construit
           //avec les donnees récupérer de la BDD
-          return new lieu($donnees);
+          return new Lieu($donnees);
       }
   }
 
@@ -60,7 +60,7 @@ class lieurepository
           $donnees = $request->fetch();
           // on retourne un nouvel objet alien construit
           //avec les donnees récupérer de la BDD
-          return new lieu($donnees);
+          return new Lieu($donnees);
       }
   }
 

@@ -2,7 +2,7 @@
 
 require 'vue/header.php';
 
-class lieu
+class Lieu
 {
     //définir les attributs
     private $_id_lieu;
