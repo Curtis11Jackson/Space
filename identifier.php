@@ -15,12 +15,13 @@ if($os === "Windows")
 
 elseif($os === "Mac")
 {
-    $db = new PDO('mysql:host=localhost;dbname=space', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=space', 'root', 'root');
 } 
 
 elseif($os === "Linux")
 {
     $db = new PDO('mysql:host=localhost;dbname=space', 'phpmyadmin', 'handigital');
+    // echo getenv("HTTP_USER_AGENT");
 }
 
 ?>
