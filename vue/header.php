@@ -1,3 +1,7 @@
+<?php 
+include 'identifier.php';
+?>
+
 
 <!doctype html>
 
@@ -57,6 +61,7 @@
         class="nasa" title="Home"></a>
 
       </li>
+      
 	 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
@@ -95,6 +100,18 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherliste.php'>";
+            }
+            else
+            {
+            echo "href='afficherliste.php'>";
+            }
+        ?> 
+        >Voir la liste</a>
+
 </div>
 </li>
 <li class="nav-item dropdown">
@@ -294,6 +311,8 @@
         >Supprimer</a>
       </div>
 </li>
+
+
     </ul>
   </div>
 </nav>
