@@ -18,10 +18,12 @@ class VegetalRepository
   public function add(Vegetal $vegetal)
   {
       //prepare une requete d'ajout de recette
-      $q = $this->_db->prepare("INSERT INTO vegetal(nom_veg) VALUES (:nom)");
+      $q = $this->_db->prepare("INSERT INTO vegetal(nom_veg, taille_veg, class_veg) VALUES (:nom, :taille, :class)");
       //execute la requette avec un tableau d'association  
       $q->execute(array(
-          'nom' => $vegetal->nom_veg()
+          'nom' => $vegetal->nom_veg(),
+          'taille' => $vegetal->taille_veg(),
+          'class' => $vegetal->class_veg()
       ));
       // On hydrate l'objet afin que son id deviennt l'id qui vient 
       //d'être créé
