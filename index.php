@@ -27,7 +27,14 @@ spl_autoload_register('chargerClasse');
 	</p>
 	</div>
 	
-	
+<?php
+
+echo getenv("HTTP_USER_AGENT");
+
+
+
+?>
+
 	
 <?php
 

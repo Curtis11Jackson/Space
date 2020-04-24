@@ -1,3 +1,7 @@
+<?php 
+include 'identifier.php';
+?>
+
 
 <!doctype html>
 
@@ -57,6 +61,7 @@
         class="nasa" title="Home"></a>
 
       </li>
+      
 	 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Animaux</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
@@ -95,6 +100,18 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherlisteanimal.php'>";
+            }
+            else
+            {
+            echo "href='crud/afficherlisteanimal.php'>";
+            }
+        ?> 
+        >Voir la liste des animaux</a>
+
 </div>
 </li>
 <li class="nav-item dropdown">
@@ -134,6 +151,17 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherlistealien.php'>";
+            }
+            else
+            {
+            echo "href='crud/afficherlistealien.php'>";
+            }
+        ?> 
+        >Voir la liste des aliens</a>
       </div>
 </li>
 <li class="nav-item dropdown">
@@ -173,6 +201,17 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherlistemineral.php'>";
+            }
+            else
+            {
+            echo "href='crud/afficherlistemineral.php'>";
+            }
+        ?> 
+        >Voir la liste des minéraux</a>
       </div>
 </li>
 <li class="nav-item dropdown">
@@ -212,6 +251,17 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherlistelieu.php'>";
+            }
+            else
+            {
+            echo "href='crud/afficherlistelieu.php'>";
+            }
+        ?> 
+        >Voir la liste des lieux</a>
       </div>
 </li>
 <li class="nav-item dropdown">
@@ -251,6 +301,17 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherlistevegetal.php'>";
+            }
+            else
+            {
+            echo "href='crud/afficherlistevegetal.php'>";
+            }
+        ?> 
+        >Voir la liste des végétaux</a>
 
       </div>
 </li>
@@ -292,6 +353,17 @@
             }
         ?> 
         >Supprimer</a>
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='afficherlisteoutil.php'>";
+            }
+            else
+            {
+            echo "href='crud/afficherlisteoutil.php'>";
+            }
+        ?> 
+        >Voir la liste des outils</a>
       </div>
 </li>
     </ul>
