@@ -24,7 +24,7 @@ class MinerauxRepository
     //execute la requette avec un tableau d'association
     $request->execute(array(
       'nom' => $mineraux->nom_min(),
-      'race' => $mineraux->class_min(),
+      'class' => $mineraux->class_min(),
 
     ));
     // On hydrate l'objet afin que son id deviennt l'id qui vient
