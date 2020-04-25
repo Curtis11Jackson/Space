@@ -22,11 +22,11 @@ class AnimalRepository
     VALUES (:nom, :race, :carac, :alim, :force)");
     //execute la requette avec un tableau d'association  
     $request->execute(array(
-      'nom' => $animal->nom_animal(),
-      'race' => $animal->race_animal(),
-      'carac' => $animal->carac_animal(),
-      'alim' => $animal->alim_animal(),
-      'force' => $animal->force_animal()
+      'nom' => $animal->nom_ani(),
+      'race' => $animal->race_ani(),
+      'carac' => $animal->carac_ani(),
+      'alim' => $animal->alim_ani(),
+      'force' => $animal->force_ani()
     ));
     // On hydrate l'objet afin que son id deviennt l'id qui vient 
     //d'être créé
