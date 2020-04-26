@@ -1,15 +1,9 @@
 <?php
 
 
+require 'identifier.php';
+require 'chargeauto.php';
 require 'vue/header.php';
-
-// On enregistre notre autoload.
-function chargerClasse($classname)
-{
-  require $classname.'.php';
-}
-
-spl_autoload_register('chargerClasse');
 
 ?>
 	
@@ -29,9 +23,8 @@ spl_autoload_register('chargerClasse');
 	
 <?php
 
-echo getenv("HTTP_USER_AGENT");
-
-
+//$monAni = array("4","KingKong","carnivore","feroce","enorme","gorille","1");
+//$monAnimal = new Animal($monAni);
 
 ?>
 

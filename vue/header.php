@@ -1,7 +1,3 @@
-<?php 
-
-?>
-
 
 <!doctype html>
 
@@ -25,12 +21,6 @@
 		<link rel='stylesheet' media='(max-width: 576px)' href='css/smartphone.css'/>";
     }
 ?> 
-
-    <!-- <link rel="stylesheet" type="text/css" href="css/main.css"/>
-		<link rel="stylesheet" media="(max-width: 992px)" href="css/tablet.css"/>
-		<link rel="stylesheet" media="(max-width: 576px)" href="css/smartphone.css"/> -->
-
-
 
 		<title>Space Missions</title>
 
