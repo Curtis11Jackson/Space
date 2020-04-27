@@ -50,18 +50,17 @@ class LieuRepository
       }
   }
 
-  public function getListName($id)
+  public function getListName()
   {
-      //on vérifie que le paramètre est bien un id
-      if (is_int($id)) {
-          //on prépare la requete SELECT
-          $request = $this->_db->query("SELECT * FROM alien");
-          // On récupère le résultat dans un tableau
-          $donnees = $request->fetch();
-          // on retourne un nouvel objet alien construit
-          //avec les donnees récupérer de la BDD
-          return new Lieu($donnees);
+      $tabloDonnees = [];
+      //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+      $req = $this->_db->query("SELECT * FROM lieu");
+      //  transformer le résultat en array 
+      while ($donnees = $req->fetch()) {
+        array_push($tabloDonnees, $donnees);
       }
+      // retourner cet array
+      return $tabloDonnees;
   }
 
   public function update($lieu)

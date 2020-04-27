@@ -21,7 +21,7 @@ require 'vue/header.php';
 </form>
 
 <?php
-class Mineraux
+class Mineral
 {
   private $_id_min,
   private $_nom_min,
