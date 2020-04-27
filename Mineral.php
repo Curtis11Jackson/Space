@@ -23,9 +23,9 @@ require 'vue/header.php';
 <?php
 class Mineral
 {
-  private $_id_min,
-  private $_nom_min,
-  private $_class_min,
+  private $_id_min;
+  private $_nom_min;
+  private $_class_min;
 
 
 //constructeur
@@ -64,7 +64,7 @@ public function id_min()
 public function class_min()
 {
 // retourne la valeur de la classification
-  return $this->_class;
+  return $this->_class_min;
 }
 
 
@@ -101,10 +101,6 @@ public function class_min()
       $this->_class_min = $class;
     }
   }
-
-
-
-
 }
 
 

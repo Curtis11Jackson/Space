@@ -24,9 +24,9 @@ require 'vue/header.php';
 <?php
 class Outil
 {
-  private $_id_outil,
-  private $_nom_outil,
-  private $_role_outil,
+  private $_id_outil;
+  private $_nom_outil;
+  private $_role_outil;
 
 
 //constructeur
@@ -97,9 +97,9 @@ public function role_outil()
   public function setRole($role)
   {
     // permet une interaction avec le role
-    if (is_string($outil))
+    if (is_string($role))
     {
-      $this->_role_outil = $outil;
+      $this->_role_outil = $role;
     }
   }
 
