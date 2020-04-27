@@ -67,12 +67,15 @@ public function update($rec)
 
 public function getListName()
 {
+    $tabloDonnees = [];
     //execute une requete SELECT qui récupère uniquement les noms de chaque recette
     $req = $this->_db->query("SELECT * FROM animal");
     //  transformer le résultat en array 
-    $donnees = $req->fetch();
+    while ($donnees = $req->fetch()) {
+      array_push($tabloDonnees, $donnees);
+    }
     // retourner cet array
-    return $donnees;
+    return $tabloDonnees;
 }
 }
 
