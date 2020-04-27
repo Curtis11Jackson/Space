@@ -50,19 +50,29 @@ class OutilRepository
       }
   }
 
-  public function getListName($id)
+  // public function getListName($id)
+  // {
+  //     if (is_int($id)) {
+  //         $request = $this->_db->query("SELECT * FROM outil");
+  //         $donnees = $request->fetch();
+  //         return new outil($donnees);
+  //     }
+  // }
+  public function getListName()
   {
-      //on vérifie que le paramètre est bien un id
-      if (is_int($id)) {
-          //on prépare la requete SELECT
-          $request = $this->_db->query("SELECT * FROM outil");
-          // On récupère le résultat dans un tableau
-          $donnees = $request->fetch();
-          // on retourne un nouvel objet alien construit
-          //avec les donnees récupérer de la BDD
-          return new outil($donnees);
+      $tabloDonnees = [];
+      //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+      $req = $this->_db->query("SELECT * FROM outil");
+      //  transformer le résultat en array 
+      while ($donnees = $req->fetch()) {
+        array_push($tabloDonnees, $donnees);
       }
+      // retourner cet array
+      return $tabloDonnees;
   }
+  
+
+
 
   public function update($outil)
   {
