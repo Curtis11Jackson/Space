@@ -8,7 +8,17 @@ require '../vue/header.php';
 
 <?php
 $monAlienRepo = new AlienRepository($db);
-var_dump($monAlienRepo->getListName());
+
+$tableauAlien = $monAlienRepo->getListName();
+
+foreach ($tableauAlien as $Alienz) {
+    echo " <article>
+                <h3>" . $Alienz['nom_alien'] . "</h3>
+                <p> Numéro id : ". $Alienz['id_alien'] . "</p>
+                <p> Race : ". $Alienz['race_alien'] . "</p>
+                <p> Caractère : ". $Alienz['carac_alien'] ."</p>
+        </article>";
+}
 ?>
 
 <?php

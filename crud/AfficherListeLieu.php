@@ -8,7 +8,17 @@ require '../vue/header.php';
 
 <?php
 $monLieuRepo = new LieuRepository($db);
-var_dump($monLieuRepo->getListName());
+
+$tableauLieu = $monLieuRepo->getListName();
+
+foreach ($tableauLieu as $Lieux) {
+    echo " <article>
+                <h3>" . $Lieux['nom_lieu'] . "</h3>
+                <p> Numéro id : ". $Lieux['id_lieu'] . "</p>
+                <p> Topographie Lieu : ". $Lieux['topo_lieu'] . "</p>
+                <p> Position : ". $Lieux['GPS_lieu'] ."</p>
+        </article>";
+}
 ?>
 
 <?php
