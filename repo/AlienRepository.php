@@ -74,10 +74,9 @@ class AlienRepository
       ));
   }
 
-  public function delete($nom)
+  public function delete(Alien $alien)
   {
-    $request = $this->_db->exec("DELETE FROM alien WHERE nom = '$nom'" );
-    return $request;
+    $request = $this->_db->exec("DELETE FROM alien WHERE id_alien =" .$alien->id_alien());
   }
 
 

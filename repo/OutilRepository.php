@@ -23,8 +23,8 @@ class OutilRepository
     $request = $this->_db->prepare("INSERT INTO outil(nom_outil, role_outil) VALUES (:nom, :role)");
     //execute la requette avec un tableau d'association
     $request->execute(array(
-      'nom' => $alien->nom_outil(),
-      'race' => $alien->role_outil(),
+      'nom' => $outil->nom_outil(),
+      'race' => $outil->role_outil(),
 
     ));
     // On hydrate l'objet afin que son id deviennt l'id qui vient
@@ -46,7 +46,7 @@ class OutilRepository
           $donnees = $request->fetch();
           // on retourne un nouvel objet alien construit
           //avec les donnees récupérer de la BDD
-          return new outil($donnees);
+          return new Outil($donnees);
       }
   }
 

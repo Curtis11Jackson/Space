@@ -17,6 +17,7 @@ foreach ($tableauAlien as $Alienz) {
                 <p> Numéro id : ". $Alienz['id_alien'] . "</p>
                 <p> Race : ". $Alienz['race_alien'] . "</p>
                 <p> Caractère : ". $Alienz['carac_alien'] ."</p>
+               <p style='width:15%;'><a href='DeleteAlien.php' style='font-size:20px;'>Delete this Alien</a></p>
         </article>";
 }
 ?>
