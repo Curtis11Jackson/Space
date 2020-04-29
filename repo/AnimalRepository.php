@@ -51,10 +51,11 @@ public function get($id)
     }
 }
 
-public function delete(Animal $ani)
+public function delete($id)
 {
     // execute une requete DELETE pour supprimer un animal avec son id
-    $this->_db->exec("DELETE FROM animal WHERE id_ani=" . $ani->id_ani());
+    $this->_db->exec("DELETE FROM animal WHERE id_ani=" .$id);
+    // $this->_db->exec("DELETE FROM animal WHERE id_ani=" . $ani->id_ani());
 }
 
 public function update($rec)
