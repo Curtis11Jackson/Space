@@ -4,7 +4,7 @@ require '../chargeauto.php';
 require '../vue/header.php';
 ?>
 
-<h1>Voici la liste des Aliens</h1>
+<h1>List of Aliens</h1>
 
 <?php
 $monAlienRepo = new AlienRepository($db);
@@ -17,7 +17,8 @@ foreach ($tableauAlien as $Alienz) {
                 <p> Numéro id : ". $Alienz['id_alien'] . "</p>
                 <p> Race : ". $Alienz['race_alien'] . "</p>
                 <p> Caractère : ". $Alienz['carac_alien'] ."</p>
-               <p style='width:15%;'><a href='DeleteAlien.php' style='font-size:20px;'>Delete this Alien</a></p>
+                <p style='width:15%;'><a href='DeleteAlien.php?id=".$Alienz['id_alien']."' style='font-size:20px;'>Delete this Alien</a></p>
+                <p style='width:15%;'><a href='UpdateAlien.php?id=".$Alienz['id_alien']."' style='font-size:20px;'>Update this Alien</a></p>
         </article>";
 }
 ?>
@@ -27,3 +28,4 @@ foreach ($tableauAlien as $Alienz) {
 require '../vue/footer.php';
 
 ?>
+<a href='approve.php?id=".$sub->id."' role="button" class="btn">Add Topic</a>
