@@ -35,6 +35,16 @@ $monAniRepo = new AnimalRepository($db);
 $monAniRepo->add($monAnimal);
 
 
+echo " <article>
+<h3>" . $tabloAni['nom_ani'] . "</h3>
+<p> Alimentation : ". $tabloAni['alim_ani'] . "</p>
+<p> Caractère : ". $tabloAni['carac_ani'] ."</p>
+<p> Force : ". $tabloAni['force_ani'] . "</p>
+<p> Race : ". $tabloAni['race_ani'] . "</p>
+<p> Lieu : ". $tabloAni['fk_lieu'] ."</p>
+</article>";
+
+
 ?>
 
 
