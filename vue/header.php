@@ -114,7 +114,7 @@
             }
             else
             {
-            echo "href='crud/AjouteraLien.php'>";
+            echo "href='crud/AjouterAlien.php'>";
             }
         ?> 
         >Ajouter</a>
