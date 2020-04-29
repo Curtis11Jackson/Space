@@ -22,9 +22,10 @@ class Animal
     {
         foreach ($donnees as $key => $value) {
             $method = 'set' . ucfirst($key);
-        }
-        if (method_exists($this, $method)) {
-            $this->$method($value);
+        
+            if (method_exists($this, $method)) {
+                $this->$method($value);
+            }
         }
     }
 
@@ -33,7 +34,7 @@ class Animal
     {
         return $this->_id_ani;
     }
-
+ 
     public function nom_ani()
     {
         return $this->_nom_ani;
@@ -109,6 +110,14 @@ class Animal
         }
     }
 
+    public function setFk_lieu($id)
+    {
+        $id = (int) $id;
+
+        if ($id > 0) {
+            $this->_fk_lieu = $id;
+        }
+    }
 
 }
 
