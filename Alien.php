@@ -1,6 +1,5 @@
 <?php
 
-require 'vue/header.php';
 	
     class Alien 
 {
@@ -23,9 +22,10 @@ public function __construct(array $donnees)
     {
         foreach ($donnees as $key => $value) {
             $method = 'set' . ucfirst($key);
-        }
-        if (method_exists($this, $method)) {
-            $this->$method($value);
+        
+            if (method_exists($this, $method)) {
+                $this->$method($value);
+            }
         }
     }
 
@@ -86,6 +86,5 @@ public function carac_alien()
 
 }
 
-require 'vue/footer.php';
 
 ?>
