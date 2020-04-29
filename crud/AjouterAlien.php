@@ -1,57 +1,23 @@
 <?php
-require 'vue/header.php';
-
-class Alien
-{
-
-  //connexion à la bdd
-  private $_db;
-
-  public function __construct($db)
-  {
-    $this ->setDb($db);
-  }
-
-  //SETTER
-  public function setDb(PDO $db)
-  {
-    $this->_db = $db;
-  }
-
-  public function add(Alien $alien)
-  {
-    //prepare une requete d'ajout de recette
-    $request = $this->_db->prepare("INSERT INTO alien(nom_alien, race_alien, carac_alien) VALUES (:nom, :race, :carac)");
-    //execute la requette avec un tableau d'association  
-    $request->execute(array(
-      'nom' => $alien->nom_alien(),
-      'race' => $alien->race_alien(),
-      'carac' => $alien->carac_alien()
-    ));
-    // On hydrate l'objet afin que son id deviennt l'id qui vient 
-    //d'être créé
-    $alien->hydrate(array(
-      'id_alien' => $this->_db->lastInsertId()
-    ));
-  }
-}
-
+require '../identifier.php';
+require '../chargeauto.php';
+require '../vue/header.php';
 ?>
 
 <div class="banner">
   <h1 style="margin-bottom:4vh">Add aliens</h1>
 </div>
 
-<form method=POST action=scriptalien.php>
+<form method=POST action=ScriptAjoutAlien.php>
   <div class="row">
     <div class="col">
-      <input type="text" id="name" class="form-control" placeholder="Alien name">
+      <input type="text" id="nom" name="nom" class="form-control" placeholder="Alien name">
     </div>
     <div class="col">
-      <input type="text" id="carac" class="form-control" placeholder="Caracteristics">
+      <input type="text" id="race" name="race" class="form-control" placeholder="Race">
     </div>
     <div class="col">
-      <input type="text" id="race" class="form-control" placeholder="Race">
+      <input type="text" id="carac" name="carac" class="form-control" placeholder="Caracteristics">
     </div>
     <button type="submit" class="btn btn-primary">Add an alien</button>
   </div>
@@ -59,5 +25,5 @@ class Alien
 
 
 <?php
-require 'vue/footer.php';
+require '../vue/footer.php';
 ?>
