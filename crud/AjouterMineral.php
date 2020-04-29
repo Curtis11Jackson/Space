@@ -1,4 +1,6 @@
 <?php
+require '../identifier.php';
+require '../chargeauto.php';
 require '../vue/header.php';
 ?>
 
@@ -7,7 +9,7 @@ require '../vue/header.php';
 	<h1 style="margin-bottom:4vh">Add minerals</h1>
 	</div>
 
-<form method=POST action=scriptmineral.php>
+<form method=POST action=ScriptAjoutMineral.php>
   <div class="row">
     <div class="col">
       <input type="text" id="name" class="form-control" placeholder="Animal name">
