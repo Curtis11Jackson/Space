@@ -58,13 +58,13 @@ public function delete($id)
     // $this->_db->exec("DELETE FROM animal WHERE id_ani=" . $ani->id_ani());
 }
 
-public function update($rec)
+public function update($ani)
 {
     //prepare une requete UPDATE de animal par rapport à son ID
     $q = $this->_db->prepare("UPDATE animal SET nom_ani = :nom");
     //execute la requette avec un tableau d'association
     $q->execute(array(
-        'nom' => $rec->nom_ani()
+        'nom' => $ani->nom_ani()
     ));
 }
 
