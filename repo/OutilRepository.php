@@ -85,9 +85,9 @@ class OutilRepository
       ));
   }
 
-  public function delete($nom)
+  public function delete($id_outil)
   {
-    $request = $this->_db->exec("DELETE FROM outil WHERE nom = '$nom'" );
+    $request = $this->_db->exec("DELETE FROM outil WHERE nom = '$id_outil" );
     return $request;
   }
 
