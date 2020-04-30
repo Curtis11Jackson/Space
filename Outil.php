@@ -1,6 +1,6 @@
 <?php
 
-require 'vue/header.php';
+
 
 ?>
 
@@ -116,6 +116,6 @@ public function role_outil()
 
 <?php
 
-require 'vue/footer.php';
+
 
  ?>
