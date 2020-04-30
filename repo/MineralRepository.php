@@ -75,9 +75,9 @@ class MineralRepository
       ));
   }
 
-  public function delete($nom)
+  public function delete($id_nom)
   {
-    $request = $this->_db->exec("DELETE FROM mineraux WHERE nom = '$nom'" );
+    $request = $this->_db->exec("DELETE FROM mineraux WHERE id_lieu = ".$id_nom);
     return $request;
   }
 
