@@ -18,12 +18,14 @@ class VegetalRepository
   public function add(Vegetal $vegetal)
   {
       //prepare une requete d'ajout de recette
-      $q = $this->_db->prepare("INSERT INTO vegetal(nom_veg, taille_veg, class_veg) VALUES (:nom, :taille, :class)");
+      $q = $this->_db->prepare("INSERT INTO vegetal(nom_veg, taille_veg, class_veg, fk_lieu) 
+      VALUES (:nom, :taille, :class, :fklieu)");
       //execute la requette avec un tableau d'association  
       $q->execute(array(
           'nom' => $vegetal->nom_veg(),
           'taille' => $vegetal->taille_veg(),
-          'class' => $vegetal->class_veg()
+          'class' => $vegetal->class_veg(),
+          'fklieu' => $vegetal->fk_lieu(),
       ));
       // On hydrate l'objet afin que son id deviennt l'id qui vient 
       //d'être créé
@@ -46,19 +48,24 @@ class VegetalRepository
       }
   }
 
-  public function delete($rec)
+  public function delete($id)
   {
       // execute une requete DELETE pour supprimer une recette avec son id
-      $this->_db->exec("DELETE FROM vegetal WHERE id_veg=" . $rec->id_veg());
+      $this->_db->exec("DELETE FROM vegetal WHERE id_veg=" .$id);
   }
 
-  public function update($rec)
+  public function update(Vegetal $vegetal)
   {
       //prepare une requete UPDATE de recette par rapport à son ID
-      $q = $this->_db->prepare("UPDATE vegetal SET nom_veg = :nom");
+      $q = $this->_db->prepare("UPDATE vegetal SET nom_veg = :nom, taille_veg = :taille, 
+    class_veg = :classif, fk_lieu = :lieu 
+    WHERE id_veg =".$vegetal->id_veg());
       //execute la requette avec un tableau d'association
       $q->execute(array(
-          'nom' => $rec->nom_veg()
+          'nom' => $vegetal->nom_veg(),
+          'taille' => $vegetal->taille_veg(),
+          'classif' => $vegetal->class_veg(),  
+          'lieu' => $vegetal->fk_lieu(),    
       ));
   }
 

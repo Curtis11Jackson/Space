@@ -17,7 +17,12 @@ foreach ($tableauVegeto as $Vegetols) {
                 <p> Numéro id : ". $Vegetols['id_veg'] . "</p>
                 <p> Taille : ". $Vegetols['taille_veg'] . "</p>
                 <p> Classification : ". $Vegetols['class_veg'] ."</p>
-        </article>";
+<p style='width:15%;'><a href='DeleteVegetal.php?id=".$Vegetols['id_veg']."' style='font-size:20px;'>Delete this Animal</a></p>
+<p style='width:15%;'><a href='UpdateVegetal.php?id=".$Vegetols['id_veg']."
+&nom=".$Vegetols['nom_veg']."&taille=".$Vegetols['taille_veg']."
+&class=".$Vegetols['class_veg']."&lieu=".$Vegetols['fk_lieu']."
+' style='font-size:20px;'>Update this Vegetable</a></p>
+</article>";
 }
 
 
