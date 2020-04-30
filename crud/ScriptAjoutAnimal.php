@@ -16,7 +16,7 @@ $alim = $_POST['alim'];
 $carac = $_POST['carac'];
 $race = $_POST['race'];
 $force = $_POST['force'];
-$lieu = 2;
+$lieu = $_POST['lieu'];
 $id = 4;
 
 $tabloAni = array(
