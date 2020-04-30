@@ -1,6 +1,6 @@
 <?php
 
-require 'vue/header.php';
+
 
 ?>
 
@@ -112,6 +112,6 @@ public function class_min()
 
 <?php
 
-require 'vue/footer.php';
+
 
  ?>
