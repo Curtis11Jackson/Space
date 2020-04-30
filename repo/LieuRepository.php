@@ -74,9 +74,9 @@ class LieuRepository
       ));
   }
 
-  public function delete($nom)
+  public function delete($id_lieu)
   {
-    $request = $this->_db->exec("DELETE FROM lieu WHERE nom = '$nom'" );
+    $request = $this->_db->exec("DELETE FROM lieu WHERE id_lieu =".$id_lieu);
     return $request;
   }
 

@@ -12,13 +12,13 @@ require '../vue/header.php';
 <form method=POST action=ScriptAjoutLieu.php>
   <div class="row">
     <div class="col">
-      <input type="text" id="name" class="form-control" placeholder="Place name">
+      <input type="text" id="nom" name="nom" class="form-control" placeholder="Place name">
     </div>
     <div class="col">
-      <input type="text" id="topo" class="form-control" placeholder="Topography">
+      <input type="text" id="topo" name="topo" class="form-control" placeholder="Topography">
     </div>
     <div class="col">
-      <input type="text" id="GPS" class="form-control" placeholder="GPS">
+      <input type="text" id="GPS" name="gps" class="form-control" placeholder="GPS">
     </div>
     <button type="submit" class="btn btn-primary">Add a place</button>
   </div>

@@ -1,14 +1,11 @@
 <?php
-
-require 'vue/header.php';
-
 class Lieu
 {
     //définir les attributs
     private $_id_lieu;
     private $_nom_lieu;
     private $_topo_lieu;
-    private $_GPS_lieu;
+    private $_gps_lieu;
 
     //constructeur
     public function __construct(array $donnees)
@@ -21,11 +18,12 @@ class Lieu
     {
         foreach ($donnees as $key => $value) {
             $method = 'set' . ucfirst($key);
-        }
-        if (method_exists($this, $method)) {
-            $this->$method($value);
+            if (method_exists($this, $method)) {
+                $this->$method($value);
         }
     }
+}
+
 
     //Getters
     public function id_lieu()
@@ -49,7 +47,7 @@ class Lieu
     public function GPS_lieu()
     {
         //retourne la topographie du lieu
-        return $this->_GPS_lieu;
+        return $this->_gps_lieu;
     }
 
     //SETTERS
@@ -76,10 +74,10 @@ class Lieu
         }
     }
 
-    public function setgps_lieu($GPS)
+    public function setgps_lieu($gps)
     {
-        if (is_string($GPS)) {
-            $this->_GPS_lieu = $GPS;
+        if (is_string($gps)) {
+            $this->_gps_lieu = $gps;
         }
     }
 }
