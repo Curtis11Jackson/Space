@@ -1,62 +1,41 @@
 <?php
-
+require '../identifier.php';
+require '../chargeauto.php';
 require '../vue/header.php';
+?>
 
-class Alien
-{
-    //caractérisé par la connexion à la base de données
-    private $_db; //va être instance de PDO
+<div class="banner">
+  <h1 style="margin-bottom:4vh">Update your Alien</h1>
+</div>
 
-    public function __construct($db)
-    {
-        $this->setDb($db);
-    }
+<?php
+$id = $_GET['id'];
+$nom = $_GET['nom'];
+$race = $_GET['race'];
+$carac = $_GET['carac'];
 
-    //SETTER
-    public function setDb(PDO $db)
-    {
-        $this->_db = $db;
-    }
-
-
-    public function update($alien)
-    {
-        //prepare une requete UPDATE de alien par rapport à son ID
-        $request = $this->_db->prepare("UPDATE alien SET nom_alien = :nom, race_alien = :race, carac_alien = :carac");
-        //execute la requete avec un tableau d'association
-        $request->execute(array(
-            'nom' => $alien->nom_alien(),
-            'race_alien' => $alien->race_alien(),
-            'carac_alien' => $alien->carac_alien()
-        ));
-    }
-}
 
 
 ?>
-<div class="banner">
-    <h1 style="margin-bottom:4vh">Update Alien</h1>
-</div>
 
-<form>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="name">Alien's Name</label>
-            <input type="text" class="form-control" id="nom" name="race" placeholder="Name">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="inputPassword4">Alien's Species</label>
-            <input type="text" class="form-control" id="race" name="race" placeholder="Species">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="carac">Alien's Character</label>
-            <input type="text" class="form-control" id="carac" placeholder="Character">
-        </div>
+
+<form method=POST action=ScriptUpdateAlien.php>
+  <div class="row">
+  <div class="col-1">
+      <input type="hidden" id="id" name="id" class="form-control"  value="<?php echo $id ?>" >
     </div>
+    <div class="col-3">
+      <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="col-3">
+      <input type="text" id="race" name="race" class="form-control" value="<?php echo $race ?>" required>
+    </div>
+    <div class="col-3">
+      <input type="text" id="carac" name="carac" class="form-control" value="<?php echo $carac ?>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+  </div>
 </form>
-
 
 <?php
 
