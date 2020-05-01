@@ -17,9 +17,6 @@ require '../vue/header.php';
     <div class="col">
       <input type="text" id="role" class="form-control" placeholder="Role">
     </div>
-    <div class="col">
-      <input type="text" id="carac" class="form-control" placeholder="Caracteristics">
-    </div>
    <button type="submit" class="btn btn-primary">Add an animal</button>
   </div>
 </form>
