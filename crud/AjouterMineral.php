@@ -12,7 +12,7 @@ require '../vue/header.php';
 <form method=POST action=ScriptAjoutMineral.php>
   <div class="row">
     <div class="col">
-      <input type="text" id="name" class="form-control" placeholder="Animal name">
+      <input type="text" id="name" class="form-control" placeholder="Tool's name">
     </div>
     <div class="col">
       <input type="text" id="classif" class="form-control" placeholder="Classification">
