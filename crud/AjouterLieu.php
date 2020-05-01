@@ -18,7 +18,7 @@ require '../vue/header.php';
       <input type="text" id="topo" name="topo" class="form-control" placeholder="Topography">
     </div>
     <div class="col">
-      <input type="text" id="GPS" name="gps" class="form-control" placeholder="GPS">
+      <input type="text" id="gps" name="gps" class="form-control" maxlength="10" placeholder="GPS">
     </div>
     <button type="submit" class="btn btn-primary">Add a place</button>
   </div>
