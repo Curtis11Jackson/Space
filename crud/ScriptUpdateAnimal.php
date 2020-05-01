@@ -6,18 +6,18 @@ require '../vue/header.php';
 ?>
 
 <div class="banner">
-  <h1 style="margin-bottom:4vh">You have added a new Animal</h1>
+  <h1 style="margin-bottom:4vh">You have modified a new Animal</h1>
 </div>
 
 <?php
 
-$nom = $_POST['name'];
+$id = $_POST['identif'];
+$nom = $_POST['nom'];
 $alim = $_POST['alim'];
 $carac = $_POST['carac'];
 $race = $_POST['race'];
 $force = $_POST['force'];
-$lieu = $_POST['lieu'];
-$id = 4;
+$lieu =  $_POST['lieu'];
 
 $tabloAni = array(
     "id_ani" => $id,    
@@ -32,7 +32,7 @@ $tabloAni = array(
 $monAnimal = new Animal($tabloAni);
 
 $monAniRepo = new AnimalRepository($db);
-$monAniRepo->add($monAnimal);
+$monAniRepo->update($monAnimal);
 
 
 echo " <article>

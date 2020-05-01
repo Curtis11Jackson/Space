@@ -25,6 +25,9 @@ require '../vue/header.php';
     <div class="col">
       <input type="text" id="force" name="force" class="form-control" placeholder="Force">
     </div>
+    <div class="col">
+      <input type="text" id="lieu" name="lieu" class="form-control" placeholder="Lieu">
+    </div>
     <button type="submit" class="btn btn-primary">Add an animal</button>
   </div>
 </form>

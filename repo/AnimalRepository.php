@@ -58,14 +58,21 @@ public function delete($id)
     // $this->_db->exec("DELETE FROM animal WHERE id_ani=" . $ani->id_ani());
 }
 
-public function update($ani)
+public function update(Animal $animal)
 {
     //prepare une requete UPDATE de animal par rapport à son ID
-    $q = $this->_db->prepare("UPDATE animal SET nom_ani = :nom");
+    $q = $this->_db->prepare("UPDATE animal SET nom_ani = :nom, race_ani = :race, 
+    carac_ani = :carac, alim_ani = :alim, force_ani = :force, fk_lieu = :lieu 
+    WHERE id_ani =".$animal->id_ani());
     //execute la requette avec un tableau d'association
     $q->execute(array(
-        'nom' => $ani->nom_ani()
-    ));
+        'nom' => $animal->nom_ani(),
+        'race' => $animal->race_ani(),
+        'carac' => $animal->carac_ani(),
+        'alim' => $animal->alim_ani(),
+        'force' => $animal->force_ani(),  
+        'lieu' => $animal->fk_lieu(),  
+      ));
 }
 
 public function getListName()
