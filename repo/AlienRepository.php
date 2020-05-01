@@ -63,15 +63,18 @@ class AlienRepository
       return $tabloDonnees;
   }
 
-  public function update($alien)
+  public function update(Alien $alien)
   {
       // On prépare la requete afin de modifier un alien dans 
       // la BDD, puis on execute en injectant 
       // l'attribut $_nom de l'objet $alien
-      $request = $this->_db->prepare("UPDATE alien SET nom_alien = :nom");
+      $request = $this->_db->prepare("UPDATE alien SET nom_alien= :nom, race_alien= :race, carac_alien= :carac WHERE id_alien=".$alien->id_alien());
       $request->execute(array(
-          'nom' => $alien->nom_alien()
+          'nom' => $alien->nom_alien(),
+          'race' => $alien->race_alien(),
+          'carac' => $alien->carac_alien()
       ));
+
   }
 
   public function delete($id_alien)

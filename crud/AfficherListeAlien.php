@@ -18,14 +18,15 @@ foreach ($tableauAlien as $Alienz) {
                 <p> Race : ". $Alienz['race_alien'] . "</p>
                 <p> Caractère : ". $Alienz['carac_alien'] ."</p>
                 <p style='width:15%;'><a href='DeleteAlien.php?id=".$Alienz['id_alien']."' style='font-size:20px;'>Delete this Alien</a></p>
-                <p style='width:15%;'><a href='UpdateAlien.php?id=".$Alienz['id_alien']."' style='font-size:20px;'>Update this Alien</a></p>
+                <p style='width:15%;'><a href='UpdateAlien.php?id=".$Alienz['id_alien']."&nom=".$Alienz['nom_alien']."&race=".$Alienz['race_alien']." &carac=".$Alienz['carac_alien']."' style='font-size:20px;'>Update this Alien</a></p>
         </article>";
 }
 ?>
 
 <?php
-
+ 
 require '../vue/footer.php';
 
 ?>
-<a href='approve.php?id=".$sub->id."' role="button" class="btn">Add Topic</a>
+
+

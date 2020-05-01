@@ -18,7 +18,9 @@ foreach ($tableauLieu as $Lieux) {
                 <p> Topographie Lieu : ". $Lieux['topo_lieu'] . "</p>
                 <p> Position : ". $Lieux['gps_lieu'] ."</p>
                 <p style='width:15%;'><a href='DeleteLieu.php?id=".$Lieux['id_lieu']."' style='font-size:20px;'>Delete this Place</a></p>
-                <p style='width:15%;'><a href='UpdateLieu.php?id=".$Lieux['id_lieu']."' style='font-size:20px;'>Update this Place</a></p>
+                <p style='width:15%;'><a href='UpdateLieu.php?id=".$Lieux['id_lieu']."
+                &nom=".$Lieux['nom_lieu']."&topo=".$Lieux['topo_lieu']."
+                &gps=".$Lieux['gps_lieu']."' style='font-size:20px;'>Update this Place</a></p>
         </article>";
 }
 ?>

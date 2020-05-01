@@ -44,7 +44,7 @@ class Lieu
         return $this->_topo_lieu;
     }
 
-    public function GPS_lieu()
+    public function gps_lieu()
     {
         //retourne la topographie du lieu
         return $this->_gps_lieu;
@@ -82,6 +82,3 @@ class Lieu
     }
 }
 
-
-
-require 'vue/footer.php';

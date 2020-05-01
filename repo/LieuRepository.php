@@ -63,14 +63,16 @@ class LieuRepository
       return $tabloDonnees;
   }
 
-  public function update($lieu)
+  public function update(Lieu $lieu)
   {
       // On prépare la requete afin de modifier un lieu dans 
       // la BDD, puis on execute en injectant 
       // l'attribut $_nom de l'objet $lieu
-      $request = $this->_db->prepare("UPDATE lieu SET nom_lieu = :nom");
+      $request = $this->_db->prepare("UPDATE lieu SET nom_lieu = :nom, topo_lieu= :topo, gps_lieu= :gps WHERE id_lieu=".$lieu->id_lieu());
       $request->execute(array(
-          'nom' => $lieu->nom_lieu()
+          'nom' => $lieu->nom_lieu(),
+          'topo' => $lieu->topo_lieu(),
+          'gps' => $lieu->gps_lieu(),
       ));
   }
 
