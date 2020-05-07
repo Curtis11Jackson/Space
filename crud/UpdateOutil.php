@@ -4,16 +4,24 @@ require '../vue/header.php';
 
 ?>
 
+<?php
+$id = $_GET['id'];
+$nom = $_GET['nom'];
+$role = $_GET['role'];
+?>
 
-<h1 style="margin-top: 19vw;">Update Outils</h1>
+<h1>Update Outils</h1>
 
-<form>
-  <div class="row" style="margin-top: 2vw;">
-    <div class="col">
-      <input type="text" id=name style="margin-left: 3vw; width: 40vw" class="form-control" placeholder="Tool name" >
+<form method=POST action=ScriptUpdateOutil.php>
+  <div class="row">
+  <div class="col-1">
+      <input type="hidden" id="id" name="id" class="form-control"  value="<?php echo $id ?>" >
     </div>
-    <div class="col">
-      <input type="text" id=utility style="margin-left: 3vw; margin-right: 3vw; width: 40vw"class="form-control" placeholder="Utility of tool">
+    <div class="col-3">
+      <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required>
+    </div>
+    <div class="col-3">
+      <input type="text" id="role" name="role" class="form-control" value="<?php echo $role ?>" required>
     </div>
 
     <button type="submit" style ="margin-right: 3vw;"class="btn btn-primary">Add tool</button>

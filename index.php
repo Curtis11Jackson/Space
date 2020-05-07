@@ -12,8 +12,10 @@ require 'vue/header.php';
 	<h1 style="margin-bottom:4vh">Space Exploration</h1>
 	</div>
 	
-	<div class="section" style="width:40%; margin:auto;">
-		<img src="images/probe3.jpg" class="astro" style="margin:0 auto 0;">
+	
+		
+
+	<div class="section">
 		<p style="margin-top:4%;">Voici un projet avec 2 Astronautes et leur sbire ! Quelques citations de nos chers camarades...<br>
 		Jean Noël : "A mon époque ..."<br>
 		Curtis : "Jean Noël tu est vieux"<br>
