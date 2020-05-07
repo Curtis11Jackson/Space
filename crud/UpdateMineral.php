@@ -5,7 +5,7 @@ require '../vue/header.php';
 ?>
 
 
-<h1 style="margin-top: 19vw;">Update Mineral</h1>
+<h1>Update Mineral</h1>
 
 <?php
 $ident = $_GET['id'];
