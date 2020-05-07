@@ -41,7 +41,7 @@ class MineralRepository
       if (is_int($id)) {
           //on prépare la requete SELECT
           $request = $this->_db->query("SELECT * FROM mineraux
-      WHERE id_mineraux = $id");
+      WHERE id_min = $id");
           // On récupère le résultat dans un tableau
           $donnees = $request->fetch();
           // on retourne un nouvel objet alien construit
