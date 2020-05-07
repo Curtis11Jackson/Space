@@ -28,7 +28,7 @@ $lieu = $_GET['lieu'];
     <div class="col">
       <input type="text" id="lieu" name="lieu" value="<?php echo $lieu ?>" class="form-control" placeholder="Lieu">
     </div>
-    <button type="submit" style ="margin-right: 3vw;"class="btn btn-primary">Add mineral</button>
+    <button type="submit" style ="margin-right: 3vw;"class="btn btn-primary">Update mineral</button>
   </div>
 </form>
 
