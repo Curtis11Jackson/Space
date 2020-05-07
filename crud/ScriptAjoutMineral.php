@@ -15,13 +15,15 @@ $lieu = $_POST['lieu'];
 $id = 4;
 
 $tabloMineral = array(
-  "id_min" => $id,
-  "nom_min" => $nom,
+  'id_min' => $id,
+  'nom_min' => $nom,
   'class_min' => $class,
   'fk_lieu' => $lieu,
 );
 
+
 $monMineral = new Mineral($tabloMineral);
+
 
 $monMineralRepo = new MineralRepository($db);
 

@@ -14,16 +14,15 @@ public function __construct(array $donnees)
 }
 
     //Fonction hydratation (pour donner des valeurs aux attributs)
-    public function hydrate(array $donnees)
-    {
+public function hydrate(array $donnees)
+{
         foreach ($donnees as $key => $value) {
             $method = 'set' . ucfirst($key);
-        
-        if (method_exists($this, $method)) {
-            $this->$method($value);
+            if (method_exists($this, $method)) {
+                $this->$method($value);
+            }
         }
-    }
-    }
+}
 
 
 
@@ -56,7 +55,7 @@ public function fk_lieu()
 // Seater//
 
 
-  public function setId($id)
+  public function setId_min($id)
   {
     // permet une interaction avec l'id
     $id = (int) $id;
@@ -67,7 +66,7 @@ public function fk_lieu()
     }
   }
 
-  public function setNom($nom)
+  public function setNom_min($nom)
   {
     //permet une interaction avec le nom
     if (is_string($nom))
@@ -76,22 +75,22 @@ public function fk_lieu()
     }
   }
 
-  public function setClass($class)
+  public function setClass_min($classif)
   {
     // permet une interaction avec la classification
-    if (is_string($class))
+    if (is_string($classif))
     {
-      $this->_class_min = $class;
+      $this->_class_min = $classif;
     }
   }
 
 
-  public function setFk_lieu($id)
+  public function setFk_lieu($fklieu)
   {
-      $id = (int) $id;
+      $fklieu = (int) $fklieu;
 
-      if ($id > 0) {
-          $this->_fk_lieu = $id;
+      if ($fklieu > 0) {
+          $this->_fk_lieu = $fklieu;
       }
     }
 }
