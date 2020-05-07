@@ -17,14 +17,14 @@ class OutilRepository
     $this->_db = $db;
   }
 
-  public function add(outil $outil)
+  public function add(Outil $outil)
   {
     //prepare une requete d'ajout de recette
     $request = $this->_db->prepare("INSERT INTO outil(nom_outil, role_outil) VALUES (:nom, :role)");
     //execute la requette avec un tableau d'association
     $request->execute(array(
       'nom' => $outil->nom_outil(),
-      'race' => $outil->role_outil(),
+      'role' => $outil->role_outil(),
 
     ));
     // On hydrate l'objet afin que son id deviennt l'id qui vient
@@ -74,20 +74,21 @@ class OutilRepository
 
 
 
-  public function update($outil)
+  public function update(Outil $outil)
   {
       // On prépare la requete afin de modifier un alien dans
       // la BDD, puis on execute en injectant
       // l'attribut $_nom de l'objet $outil
-      $request = $this->_db->prepare("UPDATE outil SET nom_outil = :nom");
+      $request = $this->_db->prepare("UPDATE outil SET nom_outil = :nom, role_outil = :role WHERE id_outil =" .$outil->id_outil());
       $request->execute(array(
-          'nom' => $outil->nom_outil()
+          'nom' => $outil->nom_outil(),
+          'role' => $outil->role_outil()
       ));
   }
 
   public function delete($id_outil)
   {
-    $request = $this->_db->exec("DELETE FROM outil WHERE id_outil = '.$id_outil" );
+    $request = $this->_db->exec("DELETE FROM outil WHERE id_outil =".$id_outil);
     return $request;
   }
 
