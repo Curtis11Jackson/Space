@@ -55,7 +55,7 @@ class MineralRepository
       $tabloDonnees = [];
       //execute une requete SELECT qui récupère uniquement les noms de chaque recette
       $req = $this->_db->query("SELECT * FROM mineraux");
-      //  transformer le résultat en array 
+      //  transformer le résultat en array
       while ($donnees = $req->fetch()) {
         array_push($tabloDonnees, $donnees);
       }
@@ -77,7 +77,7 @@ class MineralRepository
 
   public function delete($id_nom)
   {
-    $request = $this->_db->exec("DELETE FROM mineraux WHERE id_lieu = ".$id_nom);
+    $request = $this->_db->exec("DELETE FROM mineraux WHERE id_min = ".$id_min);
     return $request;
   }
 
