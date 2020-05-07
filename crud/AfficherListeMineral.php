@@ -19,7 +19,7 @@ foreach ($tableauMineral as $Mineral) {
               <p> Classification : ". $Mineral['class_min'] . "</p>
               <p> Number id : ". $Mineral['id_min'] . "</p>
               <p style='width:15%;'><a href='DeleteMineral.php?id=".$Mineral['id_min']."' style='font-size:20px;'>Delete this mineral</a></p>
-              <p style='width:15%;'><a href='UpdateMineral.php?id=".$Mineral['id_min']."&class=".$MLineral['class_min']."' style='font-size:20px;'>Update this mineral</a></p>
+              <p style='width:15%;'><a href='UpdateMineral.php?id=".$Mineral['id_min']."&class=".$Mineral['class_min']."' style='font-size:20px;'>Update this mineral</a></p>
               </article>";
 }
 
