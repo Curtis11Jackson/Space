@@ -20,12 +20,12 @@ class MineralRepository
   public function add(Mineral $mineral)
   {
     //prepare une requete d'ajout de recette
-    $request = $this->_db->prepare("INSERT INTO mineraux (nom_min, class_min) VALUES (:nom, :class)");
+    $request = $this->_db->prepare("INSERT INTO mineraux (nom_min, class_min, fk_lieu) VALUES (:nom, :class, :lieu)");
     //execute la requette avec un tableau d'association
     $request->execute(array(
       'nom' => $mineral->nom_min(),
       'class' => $mineral->class_min(),
-
+      'lieu' => $mineral->fk_lieu()
     ));
     // On hydrate l'objet afin que son id deviennt l'id qui vient
     //d'être créé
@@ -64,14 +64,17 @@ class MineralRepository
   }
 
 
-  public function update($mineral)
+  public function update(Mineral $mineral)
   {
       // On prépare la requete afin de modifier un alien dans
       // la BDD, puis on execute en injectant
       // l'attribut $_nom de l'objet $alien
-      $request = $this->_db->prepare("UPDATE mineraux SET nom_mineraux = :nom");
+      $request = $this->_db->prepare("UPDATE mineraux SET nom_min = :nom, class_min = :class, fk_lieu = :lieu 
+      WHERE id_min =".$mineral->id_min());
       $request->execute(array(
-          'nom' => $mineral->nom_min()
+          'nom' => $mineral->nom_min(),
+          'class' => $mineral->class_min(),
+          'lieu' => $mineral->fk_lieu()
       ));
   }
 

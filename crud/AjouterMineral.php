@@ -1,6 +1,6 @@
 <?php
-require '../identifier.php';
-require '../chargeauto.php';
+
+
 require '../vue/header.php';
 ?>
 
@@ -16,6 +16,9 @@ require '../vue/header.php';
     </div>
     <div class="col">
       <input type="text" id="class" name="class" class="form-control" placeholder="Mineral's Class">
+    </div>
+    <div class="col">
+      <input type="text" id="lieu" name="lieu" class="form-control" placeholder="Lieu">
     </div>
     <button type="submit" class="btn btn-primary">Add a mineral</button>
   </div>

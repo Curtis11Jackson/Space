@@ -4,6 +4,7 @@ class Mineral
   private $_id_min;
   private $_nom_min;
   private $_class_min;
+  private $_fk_lieu;
 
 
 //constructeur
@@ -17,10 +18,11 @@ public function __construct(array $donnees)
     {
         foreach ($donnees as $key => $value) {
             $method = 'set' . ucfirst($key);
-        }
+        
         if (method_exists($this, $method)) {
             $this->$method($value);
         }
+    }
     }
 
 
@@ -45,7 +47,10 @@ public function class_min()
   return $this->_class_min;
 }
 
-
+public function fk_lieu()
+{
+    return $this->_fk_lieu;
+}
 
 
 // Seater//
@@ -79,6 +84,16 @@ public function class_min()
       $this->_class_min = $class;
     }
   }
+
+
+  public function setFk_lieu($id)
+  {
+      $id = (int) $id;
+
+      if ($id > 0) {
+          $this->_fk_lieu = $id;
+      }
+    }
 }
 
 

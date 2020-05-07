@@ -7,15 +7,27 @@ require '../vue/header.php';
 
 <h1 style="margin-top: 19vw;">Update Mineral</h1>
 
-<form>
-  <div class="row" style="margin-top: 2vw;">
-    <div class="col">
-      <input type="text" id=name style="margin-left: 3vw; width: 40vw" class="form-control" placeholder="mineral name" >
-    </div>
-    <div class="col">
-      <input type="text" id=mineral style="margin-left: 3vw; margin-right: 3vw; width: 40vw"class="form-control" placeholder="mineral classification">
-    </div>
+<?php
+$ident = $_GET['id'];
+$nom = $_GET['nom'];
+$class = $_GET['class'];
+$lieu = $_GET['lieu'];
+?>
 
+<form method=POST action=ScriptUpdateMineral.php>
+  <div class="row" style="margin-top: 2vw;">
+  <div class="col">
+      <input type="hidden" id="ident" name="ident" value="<?php echo $ident ?>" class="form-control">
+    </div>
+    <div class="col">
+      <input type="text" id="name" name="nom" value="<?php echo $nom ?>" class="form-control">
+    </div>
+    <div class="col">
+      <input type="text" id="class" name="class" value="<?php echo $class ?>" class="form-control">
+    </div>
+    <div class="col">
+      <input type="text" id="lieu" name="lieu" value="<?php echo $lieu ?>" class="form-control" placeholder="Lieu">
+    </div>
     <button type="submit" style ="margin-right: 3vw;"class="btn btn-primary">Add mineral</button>
   </div>
 </form>
