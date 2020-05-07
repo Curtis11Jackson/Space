@@ -9,15 +9,15 @@ require '../vue/header.php';
 	<h1 style="margin-bottom:4vh">Add tools</h1>
 	</div>
 
-<form method=POST action=ScripAjoutOutil.php>
+<form method=POST action=ScriptAjoutOutil.php>
   <div class="row">
     <div class="col">
-      <input type="text" id="name" class="form-control" placeholder="Tool name">
+      <input type="text" id="nom" name="nom" class="form-control" placeholder="Tool name">
     </div>
     <div class="col">
-      <input type="text" id="role" class="form-control" placeholder="Role">
+      <input type="text" id="role" name="role" class="form-control" placeholder="Role">
     </div>
-   <button type="submit" class="btn btn-primary">Add an animal</button>
+   <button type="submit" class="btn btn-primary">Add a tool</button>
   </div>
 </form>
 
