@@ -75,12 +75,12 @@ public function fk_lieu()
     }
   }
 
-  public function setClass_min($classif)
+  public function setClass_min($class)
   {
     // permet une interaction avec la classification
-    if (is_string($classif))
+    if (is_string($class))
     {
-      $this->_class_min = $classif;
+      $this->_class_min = $class;
     }
   }
 
