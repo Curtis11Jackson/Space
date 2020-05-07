@@ -12,10 +12,10 @@ require '../vue/header.php';
 <form method=POST action=ScriptAjoutMineral.php>
   <div class="row">
     <div class="col">
-      <input type="text" id="name" class="form-control" placeholder="Tool's name">
+      <input type="text" id="name" name="nom" class="form-control" placeholder="Mineral's name">
     </div>
     <div class="col">
-      <input type="text" id="classif" class="form-control" placeholder="Classification">
+      <input type="text" id="class" name="class" class="form-control" placeholder="Mineral's Class">
     </div>
     <button type="submit" class="btn btn-primary">Add a mineral</button>
   </div>

@@ -23,7 +23,7 @@ $monMineral = new Mineral($tabloMineral);
 
 $monMineralRepo = new MineralRepository($db);
 
-$monMineral -> add($monMineral);
+$monMineralRepo -> add($monMineral);
 
   echo " <article>
             <h3>" . $tabloMineral['nom_min'] . "</h3>

@@ -20,7 +20,7 @@ class MineralRepository
   public function add(Mineral $mineral)
   {
     //prepare une requete d'ajout de recette
-    $request = $this->_db->prepare("INSERT INTO mineraux(nom_min, class_min) VALUES (:nom, :class)");
+    $request = $this->_db->prepare("INSERT INTO mineraux (nom_min, class_min) VALUES (:nom, :class)");
     //execute la requette avec un tableau d'association
     $request->execute(array(
       'nom' => $mineral->nom_min(),
@@ -75,7 +75,7 @@ class MineralRepository
       ));
   }
 
-  public function delete($id_nom)
+  public function delete($id_min)
   {
     $request = $this->_db->exec("DELETE FROM mineraux WHERE id_min = ".$id_min);
     return $request;
