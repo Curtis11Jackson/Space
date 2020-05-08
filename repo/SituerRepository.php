@@ -31,7 +31,7 @@ class SituerRepository
             while ($donnees = $request->fetch()) {
               array_push($tabloDonnees, $donnees);
             }
-            echo var_dump($tabloDonnees);
+            //echo var_dump($tabloDonnees);
             return $tabloDonnees;
             //return new Situer($tabloDonnees);
     }
