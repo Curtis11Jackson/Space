@@ -12,8 +12,8 @@ require '../vue/header.php';
 // $monSituer = new Situer();
 
 $monSituerRepo = new SituerRepository($db);
-
-$tableauLieuAnimo = $monSituerRepo->Situation();
+//echo var_dump($monSituerRepo);
+$tableauLieuAnimo = $monSituerRepo->GetLieuAnimal();
 
 foreach ($tableauLieuAnimo as $Animols) {
     echo " <article>
@@ -24,6 +24,10 @@ foreach ($tableauLieuAnimo as $Animols) {
                 <p> Alimentation : " . $Animols['alim_ani'] . "</p>
                 <p> Force : " . $Animols['force_ani'] . "</p>
                 <p> Lieu : " . $Animols['fk_lieu'] . "</p>
+                <h3>" . $Animols['nom_lieu'] . "</h3>
+                <p> Numéro id : ". $Animols['id_lieu'] . "</p>
+                <p> Topographie : ". $Animols['topo_lieu'] . "</p> 
+                <p> GPS : ". $Animols['gps_lieu'] . "</p> 
 <p style='width:15%;'><a href='DeleteAnimal.php?id=".$Animols['id_ani']."' style='font-size:20px;'>Delete this Animal</a></p>
 <p style='width:15%;'><a href='UpdateAnimal.php?id=".$Animols['id_ani']."
 &nom=".$Animols['nom_ani']."&race=".$Animols['race_ani']."

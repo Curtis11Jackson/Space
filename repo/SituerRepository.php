@@ -17,15 +17,23 @@ class SituerRepository
   }
 
     //création du 'JOIN'
-    public function Situation()
+    public function GetLieuAnimal()
     {
+      $tabloDonnees = [];
             //on prépare la requete SELECT
             $request = $this->_db->query("SELECT * FROM animal 
-            INNER JOIN lieu ON animal.fk_ani = lieu.fk_lieu");
-            // On récupère le résultat dans un tableau
-            $donnees = $request->fetch();
+            INNER JOIN lieu ON animal.fk_lieu = lieu.id_lieu");
+            // $request = $this->_db->query("SELECT * FROM animal 
+            // LEFT JOIN lieu ON animal.fk_lieu = lieu.id_lieu");
             
-            return new Situer($donnees);
+            // On récupère le résultat dans un tableau
+            
+            while ($donnees = $request->fetch()) {
+              array_push($tabloDonnees, $donnees);
+            }
+            echo var_dump($tabloDonnees);
+            return $tabloDonnees;
+            //return new Situer($tabloDonnees);
     }
 
 }
