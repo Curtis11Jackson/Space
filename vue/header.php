@@ -172,14 +172,14 @@
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='UpdateMineral.php'>";
+              echo "href='AfficherLieuMineral.php'>";
             }
             else
             {
-            echo "href='crud/UpdateMineral.php'>";
+            echo "href='crud/AfficherLieuMineral.php'>";
             }
         ?> 
-        >Modifier</a>
+        >Afficher le Lieu/Mineral</a>
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
