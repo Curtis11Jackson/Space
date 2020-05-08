@@ -4,7 +4,7 @@ class Situer
 {
     //définition des attributs
     private $_fk_lieu;
-    private $_fk_alien;
+    private $_fk_ani;
 
 
 //Getters
@@ -14,10 +14,10 @@ class Situer
     return $this->_fk_lieu;
 }
 
-public function fk_alien()
+public function fk_ani()
 {
     //retourne l'fk de l'alien
-    return $this->_fk_alien;
+    return $this->_fk_ani;
 }
 
  //SETTERS
@@ -30,12 +30,12 @@ public function fk_alien()
      }
  }
 
-  public function setFk_alien($id)
+  public function setFk_ani($id)
   {
       $id = (int) $id;
  
       if ($id > 0) {
-          $this->_fk_alien = $id;
+          $this->_fk_ani = $id;
       }
   }
 
