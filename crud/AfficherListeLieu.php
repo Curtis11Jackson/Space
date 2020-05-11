@@ -9,6 +9,10 @@ require '../vue/header.php';
 <?php
 $monLieuRepo = new LieuRepository($db);
 
+$countLieu = $monLieuRepo->getCountById();
+
+echo "<h3> Number of Places : " .$countLieu[0]. "</h3>";
+
 $tableauLieu = $monLieuRepo->getListName();
 
 foreach ($tableauLieu as $Lieux) {

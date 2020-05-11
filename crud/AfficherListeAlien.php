@@ -11,7 +11,7 @@ $monAlienRepo = new AlienRepository($db);
 
 $countAlien = $monAlienRepo->getCountById();
 
-echo "<h3> Nombre d'aliens : " .$countAlien[0]. "</h3>";
+echo "<h3> Number of aliens : " .$countAlien[0]. "</h3>";
 
 $tableauAlien = $monAlienRepo->getListName();
 
