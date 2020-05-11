@@ -82,5 +82,16 @@ class VegetalRepository
       return $tabloDonnees;
   }
 
+  public function getCountById()
+  {
+      $nbRows = [];
+      //execute une requete SELECT qui récupère le nombre de lignes de la table animal
+      $req = $this->_db->query("SELECT COUNT(*) FROM vegetal");
+      $nbRows = $req->fetch();
+      
+      return $nbRows;
+  }
+  
+
 }
 ?>

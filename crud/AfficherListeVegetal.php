@@ -9,6 +9,10 @@ require '../vue/header.php';
 <?php
 $monVegRepo = new VegetalRepository($db);
 
+$nbLignes = $monVegRepo->getCountById();
+
+echo "<h3> Number of vegetables : " .$nbLignes[0]. "</h3>";
+
 $tableauVegeto = $monVegRepo->getListName();
 
 foreach ($tableauVegeto as $Vegetols) {
