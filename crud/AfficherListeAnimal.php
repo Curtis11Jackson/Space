@@ -12,7 +12,7 @@ $monAniRepo = new AnimalRepository($db);
 
 $nbLignes = $monAniRepo->getCountById();
 
-echo "<h3> Nombre d'animaux : " .$nbLignes[0]. "</h3>";
+echo "<h3> Number of animals : " .$nbLignes[0]. "</h3>";
 
 $tableauAnimo = $monAniRepo->getListName();
 
