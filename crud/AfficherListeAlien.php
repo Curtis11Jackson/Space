@@ -9,6 +9,10 @@ require '../vue/header.php';
 <?php
 $monAlienRepo = new AlienRepository($db);
 
+$countAlien = $monAlienRepo->getCountById();
+
+echo "<h3> Nombre d'aliens : " .$countAlien[0]. "</h3>";
+
 $tableauAlien = $monAlienRepo->getListName();
 
 foreach ($tableauAlien as $Alienz) {

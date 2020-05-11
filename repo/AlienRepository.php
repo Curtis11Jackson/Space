@@ -84,6 +84,15 @@ class AlienRepository
       
   }
 
+  public function getCountById()
+  {
+      $tabloCount = [];
+      //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+      $req = $this->_db->query("SELECT COUNT(*) FROM alien");
+      $tabloCount = $req->fetch();
+  
+      return $tabloCount;
+  }
 }
 
 ?>
