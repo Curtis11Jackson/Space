@@ -183,14 +183,14 @@
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='DeleteMineral.php'>";
+              echo "href='AfficherMineralOutil.php'>";
             }
             else
             {
-            echo "href='crud/DeleteMineral.php'>";
+            echo "href='crud/AfficherMineralOutil.php'>";
             }
         ?> 
-        >Supprimer</a>
+        >Afficher le Mineral/Outil</a>
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
