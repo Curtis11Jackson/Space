@@ -10,6 +10,10 @@ require '../vue/header.php';
 <?php
 $monAniRepo = new AnimalRepository($db);
 
+$nbLignes = $monAniRepo->getCountById();
+
+echo "<h3> Nombre d'animaux : " .$nbLignes[0]. "</h3>";
+
 $tableauAnimo = $monAniRepo->getListName();
 
 foreach ($tableauAnimo as $Animols) {

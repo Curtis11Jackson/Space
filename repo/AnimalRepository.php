@@ -85,6 +85,18 @@ public function getListName()
     // retourner cet array
     return $tabloDonnees;
 }
+
+
+public function getCountById()
+{
+    $nbRows = [];
+    //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+    $req = $this->_db->query("SELECT COUNT(*) FROM animal");
+    $nbRows = $req->fetch();
+    
+    return $nbRows;
+}
+
 }
 
 
