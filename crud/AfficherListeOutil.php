@@ -5,10 +5,13 @@ require '../vue/header.php';
 
 ?>
 
-<h1>Voici la liste des Outils</h1>
+<h1>The list of tools</h1>
 <?php
 $monOutRepo = new OutilRepository($db);
 
+$countOutil = $monOutRepo->getCountById();
+
+echo "<h3>Nunber of tools :" .$countOutil[0]. "</h3>";
 
 $tableauOutil = $monOutRepo->getListName();
 

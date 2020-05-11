@@ -20,10 +20,10 @@ $lieu = $_GET['lieu'];
       <input type="hidden" id="ident" name="ident" value="<?php echo $ident ?>" class="form-control">
     </div>
     <div class="col">
-      <input type="text" id="name" name="nom" value="<?php echo $nom ?>" class="form-control">
+      <input type="text" id="name" name="nom" value="<?php echo $nom ?>" class="form-control" placeholder="name">
     </div>
     <div class="col">
-      <input type="text" id="class" name="class" value="<?php echo $class ?>" class="form-control">
+      <input type="text" id="class" name="class" value="<?php echo $class ?>" class="form-control" placeholder="Classification">
     </div>
     <div class="col">
       <input type="text" id="lieu" name="lieu" value="<?php echo $lieu ?>" class="form-control" placeholder="Lieu">

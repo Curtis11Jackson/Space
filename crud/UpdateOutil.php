@@ -18,10 +18,10 @@ $role = $_GET['role'];
       <input type="hidden" id="id" name="id" class="form-control"  value="<?php echo $id ?>" >
     </div>
     <div class="col-3">
-      <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required>
+      <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required placeholder="name">
     </div>
     <div class="col-3">
-      <input type="text" id="role" name="role" class="form-control" value="<?php echo $role ?>" required>
+      <input type="text" id="role" name="role" class="form-control" value="<?php echo $role ?>" required placeholder="role">
     </div>
 
     <button type="submit" style ="margin-right: 3vw;"class="btn btn-primary">Add tool</button>

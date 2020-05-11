@@ -19,7 +19,7 @@ class OutilRepository
 
   public function add(Outil $outil)
   {
-    //prepare une requete d'ajout de recette
+    //prepare une requete d'ajout des Outils
     $request = $this->_db->prepare("INSERT INTO outil(nom_outil, role_outil) VALUES (:nom, :role)");
     //execute la requette avec un tableau d'association
     $request->execute(array(
@@ -92,6 +92,16 @@ class OutilRepository
     return $request;
   }
 
+public function getCountById()
+{
+  $tabloCount = [];
+  //execute une requete SELECT qui récupére uniquement les noms de chaque Outils
+  $req = $this->_db->query("SELECT COUNT(*)FROM outil");
+  $tabloCount = $req->fetch();
+
+
+  return $tabloCount;
+}
 
 }
 
