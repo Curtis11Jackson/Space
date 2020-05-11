@@ -84,6 +84,15 @@ class MineralRepository
     return $request;
   }
 
+  public function getCountById()
+  {
+      $tabloCount = [];
+      //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+      $req = $this->_db->query("SELECT COUNT(*) FROM mineraux");
+      $tabloCount = $req->fetch();
+  
+      return $tabloCount;
+  }
 
 }
 

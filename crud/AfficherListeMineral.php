@@ -11,6 +11,10 @@ require '../vue/header.php';
 <?php
 $monMineralRepo = new MineralRepository($db);
 
+$countMineraux = $monMineralRepo->getCountById();
+
+echo "<h3> Number of minerals : " .$countMineraux[0]. "</h3>";
+
 $tableauMineral = $monMineralRepo->getListName();
 
 foreach ($tableauMineral as $Mineral) {
