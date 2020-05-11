@@ -76,7 +76,7 @@ public function update(Animal $animal)
 public function getListName()
 {
     $tabloDonnees = [];
-    //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+    //execute une requete SELECT qui récupère uniquement les noms de chaque animal
     $req = $this->_db->query("SELECT * FROM animal");
     //  transformer le résultat en array 
     while ($donnees = $req->fetch()) {
@@ -90,7 +90,7 @@ public function getListName()
 public function getCountById()
 {
     $nbRows = [];
-    //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+    //execute une requete SELECT qui récupère le nombre de lignes de la table animal
     $req = $this->_db->query("SELECT COUNT(*) FROM animal");
     $nbRows = $req->fetch();
     
