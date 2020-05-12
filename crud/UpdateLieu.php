@@ -11,6 +11,7 @@ require '../vue/header.php';
 <?php
 $id = $_GET['id'];
 $nom = $_GET['nom'];
+$img = $_GET['img'];
 $topo = $_GET['topo'];
 $gps = $_GET['gps'];
 
@@ -19,23 +20,32 @@ $gps = $_GET['gps'];
 ?>
 
 
-<form method=POST action=ScriptUpdateLieu.php>
-  <div class="row">
-  <div class="col-1">
-      <input type="hidden" id="id" name="id" class="form-control"  value="<?php echo $id ?>" >
-    </div>
-    <div class="col-3">
-      <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required>
-    </div>
-    <div class="col-3">
-      <input type="text" id="topo" name="topo" class="form-control"  value="<?php echo $topo ?>" required>
-    </div>
-    <div class="col-3">
-      <input type="text" id="gps" name="gps" class="form-control" value="<?php echo $gps ?>" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+<form class="w-75" method="POST" action="ScriptAjoutLieu.php" style="margin:auto;">
+		 <div class="form-group">
+     <input type="hidden" id="id" name="id" class="form-control"  value="<?php echo $id ?>" >
+  </div>
+  <div class="form-group">
+    <label for="nom">Place Name</label>
+    <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required>
+  </div>
+  <div class="form-group">
+    <label for="img">Image of the Place</label>
+    <input type="text" class="form-control" id="img" class="img" name="img" >
+  </div>
+  <div class="form-group">
+    <label for="prenom">Topography</label>
+    <input type="text" id="topo" name="topo" class="form-control"  value="<?php echo $topo ?>" required>
+  </div>
+  <div class="form-group">
+    <label for="race">GPS</label>
+    <input type="text" id="gps" name="gps" class="form-control" value="<?php echo $gps ?>" required>
+  </div>
+  <div style="width:12%; border:1px solid black; margin:auto;">
+  <button type="submit" class="btn btn-primary" style="margin:auto;">Save Changes</button>
   </div>
 </form>
+
+
 
 <?php
 

@@ -27,7 +27,7 @@ require '../vue/header.php';
     <input type="text" id="gps" name="gps" class="form-control" maxlength="10" placeholder="GPS">
   </div>
   <div style="width:12%; border:1px solid black; margin:auto;">
-  <button type="submit" class="btn btn-primary" style="margin:auto;">Ajouter la bête ! </button>
+  <button type="submit" class="btn btn-primary" style="margin:auto;">Add this Place</button>
   </div>
 </form>
 
