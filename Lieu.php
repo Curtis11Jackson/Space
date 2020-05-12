@@ -4,6 +4,7 @@ class Lieu
     //définir les attributs
     private $_id_lieu;
     private $_nom_lieu;
+    private $_img_lieu;
     private $_topo_lieu;
     private $_gps_lieu;
 
@@ -38,6 +39,12 @@ class Lieu
         return $this->_nom_lieu;
     }
 
+    public function img_lieu()
+    {
+        //retourne l'image du lieu
+        return $this->_img_lieu;
+    }
+
     public function topo_lieu()
     {
         //retourne la topographie du lieu
@@ -64,6 +71,13 @@ class Lieu
     {
         if (is_string($nom)) {
             $this->_nom_lieu = $nom;
+        }
+    }
+
+    public function setImg_lieu($img)
+    {
+        if (is_string($img)) {
+            $this->_img_lieu = $img;
         }
     }
 

@@ -14,6 +14,9 @@ require '../vue/header.php';
     <div class="col">
       <input type="text" id="nom" name="nom" class="form-control" placeholder="Place name">
     </div>
+    <div class="form-group">
+    <input type="text" class="form-control" id="img" class="img" name="img" placeholder="url de l'image" required>
+  </div>
     <div class="col">
       <input type="text" id="topo" name="topo" class="form-control" placeholder="Topography">
     </div>

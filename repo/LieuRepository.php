@@ -20,10 +20,11 @@ class LieuRepository
   public function add(Lieu $lieu)
   {
     //prepare une requete d'ajout de lieu
-    $request = $this->_db->prepare("INSERT INTO lieu(nom_lieu, topo_lieu, gps_lieu) VALUES (:nom, :topo, :gps)");
+    $request = $this->_db->prepare("INSERT INTO lieu(nom_lieu, img_lieu, topo_lieu, gps_lieu) VALUES (:nom, :img, :topo, :gps)");
     //execute la requette avec un tableau d'association  
     $request->execute(array(
       'nom' => $lieu->nom_lieu(),
+      'img' => $lieu->img_lieu(),
       'topo' => $lieu->topo_lieu(),
       'gps' => $lieu->gps_lieu()
     ));
@@ -68,9 +69,10 @@ class LieuRepository
       // On prépare la requete afin de modifier un lieu dans 
       // la BDD, puis on execute en injectant 
       // l'attribut $_nom de l'objet $lieu
-      $request = $this->_db->prepare("UPDATE lieu SET nom_lieu = :nom, topo_lieu= :topo, gps_lieu= :gps WHERE id_lieu=".$lieu->id_lieu());
+      $request = $this->_db->prepare("UPDATE lieu SET nom_lieu = :nom, img_lieu = :img, topo_lieu= :topo, gps_lieu= :gps WHERE id_lieu=".$lieu->id_lieu());
       $request->execute(array(
           'nom' => $lieu->nom_lieu(),
+          'img' => $lieu->img_lieu(),
           'topo' => $lieu->topo_lieu(),
           'gps' => $lieu->gps_lieu(),
       ));
