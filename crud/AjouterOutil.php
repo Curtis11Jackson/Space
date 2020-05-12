@@ -4,6 +4,11 @@ require '../chargeauto.php';
 require '../vue/header.php';
 ?>
 
+<?php
+$monOutRepo = new OutilRepository($db);
+
+$tableauOutil = $monOutRepo->getListName();
+?>
 
 <div class="banner">
 	<h1 style="margin-bottom:4vh">Add tools</h1>
@@ -21,11 +26,10 @@ require '../vue/header.php';
   <div class="form-group">
   <label for="inputState">State</label>
       <select id="inputState" class="form-control">
-        <option selected>Choose what this tool looks for</option>
-        <option>...</option>
-        <option>...</option>
-        <option>...</option>
-        <option>...</option>
+
+      <?php foreach ($tableauOutil as $Outil) {
+    echo "
+        <option selected>" . $Outil['nom_outil'] . "</option>
       </select>
   </div>
 </form>
