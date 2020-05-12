@@ -5,9 +5,9 @@ require '../vue/header.php';
 ?>
 
 <?php
-$monOutRepo = new OutilRepository($db);
+$monMineralRepo = new MineralRepository($db);
 
-$tableauOutil = $monOutRepo->getListName();
+$tabloMineral = $monMineralRepo->getListName();
 ?>
 
 <div class="banner">
@@ -24,12 +24,14 @@ $tableauOutil = $monOutRepo->getListName();
     <input type="text" id="role" name="role" class="form-control" placeholder="Usage">
   </div>
   <div class="form-group">
-  <label for="inputState">State</label>
+  <label for="inputState">Looks for this mineral</label>
       <select id="inputState" class="form-control">
 
-      <?php foreach ($tableauOutil as $Outil) {
+      <?php foreach ($tabloMineral as $Mineral) {
     echo "
-        <option selected>" . $Outil['nom_outil'] . "</option>
+        <option>" . $Mineral['nom_min'] . "</option>";
+      }
+        ?>
       </select>
   </div>
 </form>
