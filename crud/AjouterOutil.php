@@ -34,6 +34,9 @@ $tabloMineral = $monMineralRepo->getListName();
         ?>
       </select>
   </div>
+  <div style="width:12%; border:1px solid black; margin:auto;">
+  <button type="submit" class="btn btn-primary" style="margin:auto;">Add this tool</button>
+  </div>
 </form>
 
 
