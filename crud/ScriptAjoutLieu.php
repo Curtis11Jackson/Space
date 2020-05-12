@@ -31,7 +31,7 @@ $monLieuRepo -> add($monLieu);
 
   echo " <article>
               <h3>" . $tabloLieu['nom_lieu'] . "</h3>
-              <img src=". $tabloLieu['img_lieu']." width='320' height='200' class='img-fluid' "."</img>
+              <img src=../images/". $tabloLieu['img_lieu']." width='320' height='200' class='img-fluid' "."</img>
               <p> Topography : ". $tabloLieu['topo_lieu'] . "</p>
               <p> GPS Position : ". $tabloLieu['gps_lieu'] ."</p>
       </article>";

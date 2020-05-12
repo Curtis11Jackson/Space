@@ -18,7 +18,7 @@ $tableauLieu = $monLieuRepo->getListName();
 foreach ($tableauLieu as $Lieux) {
     echo " <article>
                 <h3>" . $Lieux['nom_lieu'] . "</h3>
-                <img src=". $Lieux['img_lieu']." width='320' height='200' class='img-fluid' "."</img>
+                <img src=../images/". $Lieux['img_lieu']." width='320' height='200' class='img-fluid' "."</img>
                 <p> Numéro id : ". $Lieux['id_lieu'] . "</p>
                 <p> Topographie Lieu : ". $Lieux['topo_lieu'] . "</p>
                 <p> Position : ". $Lieux['gps_lieu'] ."</p>
