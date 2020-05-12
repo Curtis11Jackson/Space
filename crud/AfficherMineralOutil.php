@@ -13,14 +13,18 @@ require '../vue/header.php';
 $monRechercherRepo = new RechercherRepository($db);
 //echo var_dump($monRechercherRepo);
 
-$tableau = $monRechercherRepo->GetMineralOutil();
-
+$tableauMineralOutil = $monRechercherRepo->GetMineralOutil();
+//echo var_dump($tableauMineralOutil);
 foreach ($tableauMineralOutil as $MineroOutil) {
     echo " <article>
                 <h3>" . $MineroOutil['nom_min'] . "</h3>
                 <p> Numéro id : ". $MineroOutil['id_min'] . "</p>
                 <p> Class : ". $MineroOutil['class_min'] ."</p>
-                <p> Recherché par : " . $MineroOutil['nom_outil'] . " <br/> 
+                <p> Recherché par : " . $MineroOutil['nom_outil'] . "</p> <br/>
+                <p> Numéro id : ". $MineroOutil['id_outil'] . "</p>
+                <p> Nom : ". $MineroOutil['nom_outil'] ."</p>
+                <p> Role : ". $MineroOutil['role_outil'] ."</p>
+                <br/> 
 </article>";
 }
 

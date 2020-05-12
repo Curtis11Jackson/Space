@@ -21,8 +21,14 @@ class RechercherRepository
     {
       $tabloMineralOutilDonnees = [];
             //on prépare la requete SELECT
-            $request = $this->_db->query("SELECT * FROM mineraux 
-INNER JOIN rechercher ON rechercher.fk_min = mineraux.id_min AND rechercher.fk_outil = outil.id_outil");
+            $request = $this->_db->query("SELECT * FROM rechercher 
+INNER JOIN mineraux ON rechercher.fk_min = mineraux.id_min 
+INNER JOIN outil ON rechercher.fk_outil = outil.id_outil");
+            
+            
+            // $request = $this->_db->query("SELECT * FROM mineraux 
+            // INNER JOIN rechercher ON rechercher.fk_min = mineraux.id_min AND rechercher.fk_outil = outil.id_outil");
+                        
             // $request = $this->_db->query("SELECT * FROM mineraux 
             // LEFT JOIN lieu ON mineraux.fk_outil = outil.id_outil");
             
@@ -31,7 +37,7 @@ INNER JOIN rechercher ON rechercher.fk_min = mineraux.id_min AND rechercher.fk_o
             while ($donnees = $request->fetch()) {
               array_push($tabloMineralOutilDonnees, $donnees);
             }
-            // echo var_dump($tabloMineralOutilDonnees);
+            //echo var_dump($tabloMineralOutilDonnees);
             return $tabloMineralOutilDonnees;
             //return new Situer($tabloMineralOutilDonnees);
     }
