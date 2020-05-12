@@ -17,12 +17,12 @@ $tableauMineralOutil = $monRechercherRepo->GetMineralOutil();
 //echo var_dump($tableauMineralOutil);
 foreach ($tableauMineralOutil as $MineroOutil) {
     echo " <article>
-                <h3>" . $MineroOutil['nom_min'] . "</h3>
+                <h3> MINERAL : " . $MineroOutil['nom_min'] . "</h3>
                 <p> Numéro id : ". $MineroOutil['id_min'] . "</p>
-                <p> Class : ". $MineroOutil['class_min'] ."</p>
-                <p> Recherché par : " . $MineroOutil['nom_outil'] . "</p> <br/>
-                <p> Numéro id : ". $MineroOutil['id_outil'] . "</p>
-                <p> Nom : ". $MineroOutil['nom_outil'] ."</p>
+                <p> Classification : ". $MineroOutil['class_min'] ."</p>
+                <br/>
+                <p> OUTIL : ". $MineroOutil['nom_outil'] . "</p>
+                <p> Numéro id : ". $MineroOutil['id_outil'] ."</p>
                 <p> Role : ". $MineroOutil['role_outil'] ."</p>
                 <br/> 
 </article>";
