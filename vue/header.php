@@ -82,14 +82,14 @@
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='DeleteAnimal.php'>";
+              echo "href='MangerAnimalVegetal.php'>";
             }
             else
             {
-            echo "href='crud/DeleteAnimal.php'>";
+            echo "href='crud/MangerAnimalVegetal.php'>";
             }
         ?> 
-        >Supprimer</a>
+        >Les animaux mangent les vegetaux</a>
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
