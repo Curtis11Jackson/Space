@@ -11,9 +11,10 @@ require '../vue/header.php';
 
 
 $monRecolterRepo = new RecolterRepository($db);
-//echo var_dump($monRechercherRepo);
+//echo var_dump(RecolterRepository;
 
-$tableauVegetalOutill = $monRecolterRepo->GetVegetalOutil();
+
+$tableauVegetalOutil = $monRecolterRepo->GetVegetalOutil();
 //echo var_dump($tableauMineralOutil);
 foreach ($tableauVegetalOutil as $VegetalOutil) {
     echo " <article>
@@ -23,7 +24,7 @@ foreach ($tableauVegetalOutil as $VegetalOutil) {
                 <br/>
                 <p> Vegetal : ". $VegetalOutil['nom_veg'] . "</p>
                 <p> Numéro id : ". $VegetalOutil['id_veg'] ."</p>
-                <p> Classification : ". $VegetalOutil['role_outil'] ."</p>
+                <p> Classification : ". $VegetalOutil['class_veg'] ."</p>
                 <br/> 
 </article>";
 }
