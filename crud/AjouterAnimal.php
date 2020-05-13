@@ -1,8 +1,13 @@
 <?php
-
+require '../identifier.php';
+require '../chargeauto.php';
 require '../vue/header.php';
 ?>
+<?php
+$monLieuRepo = new LieuRepository($db);
 
+$tabloLieu = $monLieuRepo->getListName();
+?>
 
 <div class="banner">
 	<h1 style="margin-bottom:4vh">Add animals</h1>
@@ -25,9 +30,17 @@ require '../vue/header.php';
     <div class="col">
       <input type="text" id="force" name="force" class="form-control" placeholder="Force">
     </div>
-    <div class="col">
-      <input type="text" id="lieu" name="lieu" class="form-control" placeholder="Lieu">
-    </div>
+    <div class="form-group">
+      <label for="inputState">Place where the animal is</label>
+          <select id="inputState" class="form-control" name="lieu">
+          <?php $i=1; 
+                foreach ($tabloLieu as $Lieu) {
+                    echo "<option value=$i>" . $Lieu['nom_lieu'] . "</option>";
+                    $i++;
+                }
+            ?>
+          </select>
+  </div>
     <button type="submit" class="btn btn-primary">Add an animal</button>
   </div>
 </form>

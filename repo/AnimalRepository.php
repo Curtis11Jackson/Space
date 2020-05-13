@@ -18,8 +18,8 @@ class AnimalRepository
   public function add(Animal $animal)
   {
     //prepare une requete d'ajout de animal
-    $request = $this->_db->prepare("INSERT INTO animal(nom_ani, race_ani, carac_ani, alim_ani, force_ani) 
-    VALUES (:nom, :race, :carac, :alim, :force)");
+    $request = $this->_db->prepare("INSERT INTO animal(nom_ani, race_ani, carac_ani, alim_ani, force_ani, fk_lieu) 
+    VALUES (:nom, :race, :carac, :alim, :force, :lieu)");
     //execute la requette avec un tableau d'association  
     $request->execute(array(
       'nom' => $animal->nom_ani(),
@@ -27,6 +27,7 @@ class AnimalRepository
       'carac' => $animal->carac_ani(),
       'alim' => $animal->alim_ani(),
       'force' => $animal->force_ani(),
+      'lieu' => $animal->fk_lieu(),
     ));
     // On hydrate l'objet afin que son id deviennt l'id qui vient 
     //d'être créé
