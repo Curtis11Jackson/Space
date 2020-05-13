@@ -5,12 +5,12 @@ require '../vue/header.php';
 
 ?>
 
-<h1>The Animals eat vegetables</h1>
-
 <?php
 $monMangerRepo = new MangerRepository($db);
 
 $tableauAnimo = $monMangerRepo->getAnimalVegetal();
+
+echo "<h2 style='text-align:center'>The Animals eat vegetables</h2>";
 
 foreach ($tableauAnimo as $Animols) {
     echo " <article>
@@ -21,7 +21,7 @@ foreach ($tableauAnimo as $Animols) {
                 <p> Alimentation : " . $Animols['alim_ani'] . "</p>
                 <p> Force : " . $Animols['force_ani'] . "</p>
                 <p> Lieu : " . $Animols['fk_lieu'] . "</p>
-                <h4 style='text-align:center'> mange </h4>
+                <h4 style='text-align:center'> eats </h4>
                 <p> Numéro id : ". $Animols['id_veg'] . "</p>
                 <p> Nom : ". $Animols['nom_veg'] . "</p> 
                 <p> Classification : ". $Animols['class_veg'] ."</p>
