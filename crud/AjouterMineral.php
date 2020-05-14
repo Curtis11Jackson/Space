@@ -15,15 +15,15 @@ $tabloLieu = $monLieuRepo->getListName();
   
   <form class="w-75" method="POST" action="ScriptAjoutMineral.php" style="margin:auto;">
 		 <div class="form-group">
-    <label for="nom">Mineral's Name</label>
+    <label for="nom" style="color:white; background-color:black;">Mineral's Name</label>
     <input type="text" id="nom" name="nom" class="form-control" placeholder="Mineral's name">
   </div>
   <div class="form-group">
-    <label for="img">Use of tool</label>
+    <label for="class" style="color:white; background-color:black;">Mineral's Class</label>
     <input type="text" id="class" name="class" class="form-control" placeholder="Mineral's Class">
   </div>
   <div class="form-group">
-  <label for="inputState">Place where the mineral is</label>
+  <label for="inputState" style="color:white; background-color:black;">Place where the mineral is</label>
           <select id="inputState" class="form-control" name="lieu">
           <?php $i=1; 
                 foreach ($tabloLieu as $Lieu) {
@@ -32,13 +32,11 @@ $tabloLieu = $monLieuRepo->getListName();
                 }
             ?>
           </select>
-      </select>
   </div>
-  <div style="width:12%; border:1px solid black; margin:auto;">
+  <div style="width:12%; margin:auto;">
   <button type="submit" class="btn btn-primary" style="margin:auto;">Add this Mineral</button>
   </div>
   </form>
-  </div>
 
 
 <!-- <form method=POST action=ScriptAjoutMineral.php>
