@@ -11,22 +11,22 @@ require '../vue/header.php';
 
   <form class="w-75" method="POST" action="ScriptAjoutLieu.php" style="margin:auto;">
 		 <div class="form-group">
-    <label for="nom">Place Name</label>
+    <label for="nom" style="color:white; background-color:black;">Place Name</label>
     <input type="text" id="nom" name="nom" class="form-control" placeholder="Place name">
   </div>
   <div class="form-group">
-    <label for="img">Image of the Place</label>
-    <input type="text" class="form-control" id="img" class="img" name="img" placeholder="" required>
+    <label for="img" style="color:white; background-color:black;">Image of the Place</label>
+    <input type="text" class="form-control" id="img" class="img" name="img" placeholder="url of the image" required>
   </div>
   <div class="form-group">
-    <label for="prenom">Topography</label>
+    <label for="prenom" style="color:white; background-color:black;">Topography</label>
     <input type="text" id="topo" name="topo" class="form-control" placeholder="Topography">
   </div>
   <div class="form-group">
-    <label for="race">GPS</label>
-    <input type="text" id="gps" name="gps" class="form-control" maxlength="10" placeholder="GPS">
+    <label for="race" style="color:white; background-color:black;">GPS</label>
+    <input type="number" id="gps" name="gps" class="form-control" title="Invalid GPS" maxlength="10" placeholder="GPS">
   </div>
-  <div style="width:12%; border:1px solid black; margin:auto;">
+  <div style="width:12%; margin:auto;">
   <button type="submit" class="btn btn-primary" style="margin:auto;">Add this Place</button>
   </div>
 </form>
