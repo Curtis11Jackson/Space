@@ -24,19 +24,22 @@ $tabloLieu = $monLieuRepo->getListName();
   </div>
   <div class="form-group">
   <label for="inputState">Place where the mineral is</label>
-      <select id="inputState" class="form-control">
-
-      <?php foreach ($tabloLieu as $Lieu) {
-    echo "
-        <option>" . $Lieu['nom_lieu'] . "</option>";
-      }
-        ?>
+          <select id="inputState" class="form-control" name="lieu">
+          <?php $i=1; 
+                foreach ($tabloLieu as $Lieu) {
+                    echo "<option value=$i>" . $Lieu['nom_lieu'] . "</option>";
+                    $i++;
+                }
+            ?>
+          </select>
       </select>
   </div>
   <div style="width:12%; border:1px solid black; margin:auto;">
   <button type="submit" class="btn btn-primary" style="margin:auto;">Add this Mineral</button>
   </div>
   </form>
+  </div>
+
 
 <!-- <form method=POST action=ScriptAjoutMineral.php>
   <div class="row">
@@ -46,11 +49,9 @@ $tabloLieu = $monLieuRepo->getListName();
     <div class="col">
       <input type="text" id="class" name="class" class="form-control" placeholder="Mineral's Class">
     </div>
-    <div class="col">
+ 
       <input type="text" id="lieu" name="lieu" class="form-control" placeholder="Lieu">
-    </div>
-    <button type="submit" class="btn btn-primary">Add a mineral</button>
-  </div>
+
 </form> -->
 
 
