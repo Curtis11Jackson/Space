@@ -13,7 +13,7 @@ require 'vue/header.php';
 	</div>
 	
 	<div class="justify-content-center resize shadow bg-white rounded">
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
 		<div class="carousel-inner">
 
 
@@ -31,7 +31,7 @@ require 'vue/header.php';
 				<div class="<?php if ($isActive) echo 'active'; ?> carousel-item">
 					<img class="d-block w-100 resize" src="images/<?php echo $donnees['img_lieu']; ?>">
 				</div>
-
+				 
 			<?php
 				$isActive = false;
 			}
