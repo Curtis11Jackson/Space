@@ -12,12 +12,14 @@ require '../vue/header.php';
 
 $nom = $_POST['nom'];
 $role = $_POST['role'];
+$mineral = $_POST['mineral'];
 $id = 4;
 
 $tabloOutil = array(
   "id_outil" => $id,
   "nom_outil" => $nom,
   'role_outil' => $role,
+  'fk_min' => $mineral
 );
 
 $monOutil = new Outil($tabloOutil);
@@ -29,6 +31,7 @@ $monOutilRepo -> add($monOutil);
   echo " <article>
               <h3>" . $tabloOutil['nom_outil'] . "</h3>
               <p> Role : ". $tabloOutil['role_outil'] . "</p>
+              <p> Mineral looked for : ". $tabloOutil['fk_min'] . "</p>
       </article>";
 
 

@@ -4,6 +4,7 @@ class Outil
   private $_id_outil;
   private $_nom_outil;
   private $_role_outil;
+  private $_fk_min;
 
 
 //constructeur
@@ -45,10 +46,14 @@ public function role_outil()
   return $this->_role_outil;
 }
 
+public function fk_min()
+{
+// retourne le fk_min
+  return $this->_fk_min;
+}
 
 
-
-// Seater//
+// Setter//
 
 
   public function setId_outil($id)
@@ -77,6 +82,15 @@ public function role_outil()
     if (is_string($role))
     {
       $this->_role_outil = $role;
+    }
+  }
+
+  public function setFk_min($fkmin)
+  {
+    // permet une interaction avec le fkmin
+    if (is_string($fkmin))
+    {
+      $this->_role_outil = $fkmin;
     }
   }
 }
