@@ -30,7 +30,7 @@ require 'vue/header.php';
 			?>
 
 				<div class="<?php if ($isActive) echo 'active'; ?> carousel-item justify-content-center">
-					<img class="d-block w-100 align-items-center" src="images/<?php echo $donnees['img_lieu']; ?>">
+					<img class="d-block w-100 align-items-center" style="margin-left:50%;" src="images/<?php echo $donnees['img_lieu']; ?>">
 				</div>
 				
 			<?php
