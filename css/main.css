@@ -46,7 +46,9 @@ button {
 	margin-top:10vh;
 }
 
-
+.carousel-item {
+	width:50%;
+}
 
 
 h5 {

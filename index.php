@@ -6,32 +6,33 @@ require 'chargeauto.php';
 require 'vue/header.php';
 
 ?>
-	
 
-	<div class="banner">
+
+<div class="banner">
 	<h1 style="margin-bottom:4vh">Space Exploration</h1>
-	</div>
-	
-	<div class="justify-content-center resize shadow bg-white rounded">
+</div>
+
+
+<div class="justify-content-center shadow  rounded">
 	<div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
-		<div class="carousel-inner">
+		<div class="carousel-inner justify-content-center">
 
 
 			<?php
-			$reponse = $db->query('SELECT * FROM lieu ORDER BY id_lieu DESC LIMIT 5');
-			
+			$reponse = $db->query('SELECT * FROM lieu ORDER BY id_lieu');
+
 			$isActive = true;
-			
+
 			while ($donnees = $reponse->fetch()) {
-				
-					
-	
+
+
+
 			?>
 
-				<div class="<?php if ($isActive) echo 'active'; ?> carousel-item">
-					<img class="d-block w-100 resize" src="images/<?php echo $donnees['img_lieu']; ?>">
+				<div class="<?php if ($isActive) echo 'active'; ?> carousel-item justify-content-center">
+					<img class="d-block w-100 align-items-center" src="images/<?php echo $donnees['img_lieu']; ?>">
 				</div>
-				 
+
 			<?php
 				$isActive = false;
 			}
@@ -49,16 +50,16 @@ require 'vue/header.php';
 	</div>
 </div>
 </div>
-		
+</div>
 
-	<div class="section">
-		<p style="margin-top:4%;">Voici un projet avec 2 Astronautes et leur sbire ! Quelques citations de nos chers camarades...<br>
+<div class="section">
+	<p style="margin-top:4%;">Voici un projet avec 2 Astronautes et leur sbire ! Quelques citations de nos chers camarades...<br>
 		Jean Noël : "A mon époque ..."<br>
 		Curtis : "Jean Noël tu est vieux"<br>
 		Laurent : "Eh les gars ça marche pas moi !!"
 	</p>
-	</div>
-	
+</div>
+
 <?php
 
 //$monAni = array("4","KingKong","carnivore","feroce","enorme","gorille","1");
@@ -66,7 +67,7 @@ require 'vue/header.php';
 
 ?>
 
-	
+
 <?php
 
 require 'vue/footer.php';
