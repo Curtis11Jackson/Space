@@ -58,7 +58,7 @@ require 'vue/header.php';
 
 <h2 style="color:white; margin-top:4vh; text-align:center;">Créez un compte</h2>
   
-  <form class="w-50" method="POST" action="CreateUser" style="margin:auto;">
+  <form class="w-50" method="POST" action="CreateUser.php" style="margin:auto;">
 		 <div class="form-group">
     <label for="prenom" style="color:white;">Prénom</label>
     <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Renseignez votre Prénom">
