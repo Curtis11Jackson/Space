@@ -65,7 +65,7 @@ require 'vue/header.php';
   </div>
   <div class="form-group">
     <label for="nom" style="color:white;">Nom</label>
-    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Renseignez votre Nom">
+    <input type="text" id="nom" name="nom" class="form-control" placeholder="Renseignez votre Nom">
   </div>
   <div class="form-group">
     <label for="mail" style="color:white;">Email</label>
