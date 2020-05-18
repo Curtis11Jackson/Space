@@ -25,8 +25,19 @@ $monUserRepo = new UserRepository($db);
 $monUserRepo -> add($myUser);
 ?>
 <div class="banner">
-  <h1>Thank you <?php echo $UserTable['mail_user']. " " ?>for creating an account</h1>
+  <h1 style="margin-bottom:4vh;">Thank you <?php echo $UserTable['login_user']. " " ?>for creating an account</h1>
 </div>
+<!-- <?php
+  // echo " <article>
+  //             <p> Your First Name : ". $UserTable['prenom_user'] . "</p>
+  //             <p> Your Surname : ". $UserTable['nom_user'] . "</p>
+  //             <p> Your Email : ". $UserTable['mail_user'] . "</p>
+  //             <p> Your Password  : " . $UserTable['passw_user'] . " </p> 
+  //     </article>";
+
+?> -->
+
+<a href="UserAccount.php" style="text-align:center;">Go to My Account</a>
 
 <?php
 

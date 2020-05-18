@@ -77,7 +77,7 @@ require 'vue/header.php';
   </div>
   <div class="form-group">
     <label for="password" style="color:white;">Mot de Passe</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Renseignez votre Mote de Passe">
+    <input type="password" id="password" name="password" class="form-control" placeholder="Renseignez votre Mot de Passe">
   </div>
   <div style="width:15%; margin:auto;">
   <button type="submit" class="btn btn-primary" style="margin:auto;">Créer mon compte</button>
