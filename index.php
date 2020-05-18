@@ -29,9 +29,13 @@ require 'vue/header.php';
 
 			?>
 
+				
 				<div class="<?php if ($isActive) echo 'active'; ?> carousel-item justify-content-center">
 					<img class="d-block w-100 align-items-center" style="margin-left:50%;" src="images/<?php echo $donnees['img_lieu']; ?>">
+				<div><h2 class="d-block w-100 align-items-center" style="background-color:white; text-align:center; margin-left:50%; padding:2px;"><?php echo $donnees['nom_lieu']; ?></h2>
+        		</div>
 				</div>
+
 				
 			<?php
 				$isActive = false;
