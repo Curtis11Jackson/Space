@@ -3,15 +3,20 @@ require '../identifier.php';
 require '../chargeauto.php';
 require '../vue/header.php';
 
-
-$email = $_POST['email'];
+$prenom = $_POST['prenom'];
+$nom = $_POST['nom'];
+$mail = $_POST['mail'];
+$login = $_POST['login'];
 $password = $_POST['password'];
-$id = 4;
+$id = 2;
 
 $UserTable = array(
-  "id_user" => $id,    
-  'email_user' => $email,
-  'password_user' => $password);
+  "id_user" => $id,
+  "prenom_user" => $prenom,
+  "nom_user" => $nom,   
+  'mail_user' => $mail,
+  'login_user' => $login,
+  'passw_user' => $password);
 
 $myUser = new User($UserTable);
 
