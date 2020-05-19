@@ -103,8 +103,17 @@ a:hover, a:visited, a:link, a:active
 	color:white;
 }
 
+.parent
+{
 
+	text-align: center;
+}
 
+.child
+{
+
+color: black;
+}
 
 
 

@@ -22,7 +22,7 @@ require '../vue/header.php';
   <form class="w-50" method="POST" action="AddedUser.php" style="margin:auto;">
 		 <div class="form-group">
     <label for="prenom" style="color:white;">Prénom</label>
-    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Renseignez votre Prénom">
+    <input  type="text" id="prenom" name="prenom" class="form-control" placeholder="Renseignez votre Prénom">
   </div>
   <div class="form-group">
     <label for="nom" style="color:white;">Nom</label>
