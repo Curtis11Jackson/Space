@@ -15,7 +15,7 @@ require 'vue/header.php';
 
 <h2 style="color:white; margin-top:4vh; text-align:center;">Log In</h2>
   
-  <form class="w-50" method="POST" action="crud/CheckedAccount.php" style="margin:auto;">
+  <form class="w-50" method="POST" action="crud/CheckAccount.php" style="margin:auto;">
   <div class="form-group">
     <label for="login" style="color:white;">Login</label>
     <input type="text" id="login" name="login" class="form-control" placeholder="Renseignez votre Login">
