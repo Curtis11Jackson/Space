@@ -11,7 +11,13 @@ require '../vue/header.php';
 	<h1 style="margin-bottom:4vh">Space Exploration</h1>
 </div>
 
-<h2 style="color:white; margin-top:4vh; text-align:center;">Create an account</h2>
+
+
+<div class="parent">
+  <img class="child" src="../images/naut.jpg" style="width:15%; height:10%;">
+</div>
+
+<h2 style="color:white; margin-top:4vh; text-align:center; background-color:black; width:20%; margin:auto;">Create an account</h2>
   
   <form class="w-50" method="POST" action="crud/AddedUser.php" style="margin:auto;">
 		 <div class="form-group">
