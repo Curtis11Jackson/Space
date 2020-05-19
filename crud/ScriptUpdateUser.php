@@ -5,7 +5,7 @@ require '../vue/header.php';
 ?>
 
 <div class="banner">
-  <h1 style="margin-bottom:4vh">Updated Alien</h1>
+  <h1 style="margin-bottom:4vh">You have updated your Account</h1>
 </div>
 
 <?php
@@ -20,6 +20,7 @@ $password = $_POST['password'];
 $UserTable = array(
   "id_user" => $id,
   "prenom_user" => $prenom,
+  "nom_user" => $nom,
   "mail_user" => $mail,
   "login_user" => $login,
   "passw_user" => $password,
@@ -36,6 +37,7 @@ $monUserRepo -> update($myUser);
               <p> Your First Name : ". $UserTable['prenom_user'] . "</p>
               <p> Your Surname : ". $UserTable['nom_user'] . "</p>
               <p> Your Email : ". $UserTable['mail_user'] . "</p>
+              <p> Your Login : ". $UserTable['login_user'] . "</p>
               <p> Your Password  : " . $UserTable['passw_user'] . " </p> 
       </article>";
 
