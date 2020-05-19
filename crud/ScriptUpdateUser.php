@@ -43,6 +43,8 @@ $monUserRepo -> update($myUser);
 
 ?> 
 
-?>
+<a href="UserAccount.php?id=<?php echo $myUser->id_user()?>" style="text-align:center;">Go to My Account</a>
+
+
 
 
