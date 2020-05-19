@@ -3,7 +3,7 @@ require '../identifier.php';
 require '../chargeauto.php';
 require '../vue/header.php';
 
-$id = $_POST['id'];
+$id = 2;
 $prenom = $_POST['prenom'];
 $nom = $_POST['nom'];
 $mail = $_POST['mail'];
