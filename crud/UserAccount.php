@@ -9,12 +9,12 @@ require '../vue/header.php';
 <?php
 
 
-
+$id = $_GET['id'];
 
 $monUserRepo = new UserRepository($db);
 
 
-$UserTable = $monUserRepo->getListName();
+$UserTable = $monUserRepo->getNameById($id);
 
 
 

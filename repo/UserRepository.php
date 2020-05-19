@@ -88,6 +88,18 @@ public function getListName()
     return $tabloDonnees;
 }
 
+public function getNameById($id)
+{
+    $tabloDonnees = [];
+
+    $req = $this->_db->query("SELECT * FROM user WHERE id_user =".$id);
+    //  transformer le résultat en array 
+    while ($donnees = $req->fetch()) {
+      array_push($tabloDonnees, $donnees);
+    }
+    // retourner cet array
+    return $tabloDonnees;
+}
 
 public function getCountById()
 {
