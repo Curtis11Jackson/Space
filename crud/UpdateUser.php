@@ -38,7 +38,7 @@ $password = $_GET['password'];
   </div>
   <div class="form-group">
     <label for="login" style="color:white;">Login</label>
-    <input type="text" id="login" name="login" class="form-control" pvalue="<?php echo $login ?>">
+    <input type="text" id="login" name="login" class="form-control" value="<?php echo $login ?>">
   </div>
   <div class="form-group">
     <label for="password" style="color:white;">Mot de Passe</label>
