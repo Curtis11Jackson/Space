@@ -12,12 +12,12 @@ $password = $_POST['passw_user'];
 
 
 
-$reponse = $dbh ->query("SELECT * FROM admin WHERE login_user = '" . $login . "'");
+$reponse = $dbh ->query("SELECT * FROM user WHERE login_user = '" . $login . "'");
 $req = $reponse -> fetch();
 
 
 if ($req != false) {
-    $reponsemdp = $dbh -> query("SELECT * FROM admin WHERE login_user = '" . $login . " ' AND passw_user = '". $password."'");
+    $reponsemdp = $dbh -> query("SELECT * FROM user WHERE login_user = '" . $login . " ' AND passw_user = '". $password."'");
     $reqmdp = $reponsemdp -> fetch();
     if ($reqmdp != false) {
         header("Location:CheckedAccount.php?");
