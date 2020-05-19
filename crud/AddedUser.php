@@ -38,7 +38,7 @@ $monUserRepo -> add($myUser);
 
 ?> -->
 
-<a href="UserAccount.php?id=<?php echo $UserTable['id_user']?>" style="text-align:center;">Go to My Account</a>
+<a href="UserAccount.php?id=<?php echo $myUser->id_user()?>" style="text-align:center;">Go to My Account</a>
 
 <?php
 
