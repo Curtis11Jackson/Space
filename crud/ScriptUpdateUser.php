@@ -39,7 +39,7 @@ $monUserRepo -> update($myUser);
               <p> Your Password  : " . $UserTable['passw_user'] . " </p> 
       </article>";
 
-
+?> 
 
 ?>
 
