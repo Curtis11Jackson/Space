@@ -42,7 +42,8 @@ $password = $_GET['password'];
   </div>
   <div class="form-group">
     <label for="password" style="color:white;">Mot de Passe</label>
-    <input type="password" id="password" name="password" class="form-control" value="<?php echo $password ?>">
+    <input type="password" id="inputpassword4" name="password" class="form-control" value="<?php echo $password ?>">
+    <input type="checkbox" onclick="revealPassword()">Show Password
   </div>
   <div style="width:15%; margin:auto;">
   <button type="submit" class="btn btn-primary" style="margin:auto;">Save changes</button>
