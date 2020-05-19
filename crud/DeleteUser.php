@@ -7,15 +7,15 @@ require '../chargeauto.php';
 <div class="banner">
 	<h1 style="margin-bottom:4vh">Delete an account</h1>
     </div>
-    
+
     <?php
     
-    $prenom = $_POST['prenom'];
-    $nom = $_POST['nom'];
-    $mail = $_POST['mail'];
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-    $id = 2;
+    $prenom = $_GET['prenom'];
+    $nom = $_GET['nom'];
+    $mail = $_GET['mail'];
+    $login = $_GET['login'];
+    $password = $_GET['password'];
+    $id = $_GET['id'];
     
     $UserTable = array(
       "id_user" => $id,
@@ -29,16 +29,9 @@ require '../chargeauto.php';
     
     $monUserRepo = new UserRepository($db);
     
-    $monUserRepo -> add($myUser);
+    $monUserRepo -> delete($id);
 
 ?>
-
-    <h3><?php echo $UserTable['login_user']. " " ?> are you sure you want to delete your account ?</h3>
-
-    <a href="ConfirmDeleteUser.php">Yes</a>
-    <a href="UserAccount.php">No</a>
-
-
 
 <?php
 require '../vue/footer.php';
