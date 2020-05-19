@@ -5,7 +5,7 @@ require '../vue/header.php';
 ?>
 
 <?php
-$id = 2;
+$id = $_GET['id'];
 $prenom =  $_GET['prenom'];
 $nom =  $_GET['nom'];
 $mail = $_GET['mail'];
@@ -20,7 +20,7 @@ $password = $_GET['password'];
 
 <h2 style="color:white; margin-top:4vh; text-align:center;">Update your info</h2>
   
-  <form class="w-50" method="POST" action="crud/AddedUser.php" style="margin:auto;">
+  <form class="w-50" method="POST" action="ScriptUpdateUser.php" style="margin:auto;">
 		 <div class="form-group">
     <input type="hidden" id="id" name="id"  value="<?php echo $id ?>">
   </div>
