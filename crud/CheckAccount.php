@@ -45,10 +45,10 @@ if ($donnees != false) {
         header("Location: CheckedAccount.php");
     }
     else{
-        echo "<h2>Mauvais Login</h2>";
+        echo "<h2>Mauvais Password</h2>";
     }
 } else {
-    echo "<h2>Mauvais Password</h2>";
+    echo "<h2>Mauvais Login</h2>";
 }
 ?>
 
