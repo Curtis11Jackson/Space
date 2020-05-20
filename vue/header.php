@@ -364,7 +364,7 @@
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
         <?php 
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='Login.php'>";
+              echo "href='../Login.php'>";
             }
             else
             {
