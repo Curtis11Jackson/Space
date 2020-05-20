@@ -1,8 +1,7 @@
 <?php
 
-require '../identifier.php';
 require '../chargeauto.php';
-require '../vue/header.php';
+
 
 $user_agent = getenv("HTTP_USER_AGENT");
 
@@ -42,7 +41,7 @@ if ($donnees != false) {
     $reponse2 = $db->query("SELECT * FROM user WHERE login_user='" . $login. "' AND passw_user='". $password. "'");
     $donnees2 = $reponse2->fetch();
     if ($donnees2 != false) {
-        header("Location: CheckedAccount.php");
+        header("Location:CheckedAccount.php");
     }
     else{
         echo "<h2>Mauvais Password</h2>";
