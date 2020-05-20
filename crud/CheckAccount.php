@@ -4,32 +4,58 @@ require '../identifier.php';
 require '../chargeauto.php';
 require '../vue/header.php';
 
+$user_agent = getenv("HTTP_USER_AGENT");
 
+if(strpos($user_agent, "Win") !== FALSE)
+$os = "Windows";
+elseif(strpos($user_agent, "Mac") !== FALSE)
+$os = "Mac";
+elseif(strpos($user_agent, "Lin") !== FALSE)
+$os = "Linux";
 
-$login = $_POST['login_user'];
-
-$password = $_POST['passw_user'];
-
-
-
-$reponse = $dbh ->query("SELECT * FROM user WHERE login_user = '" . $login . "'");
-$req = $reponse -> fetch();
-
-
-if ($req != false) {
-    $reponsemdp = $dbh -> query("SELECT * FROM user WHERE login_user = '" . $login . " ' AND passw_user = '". $password."'");
-    $reqmdp = $reponsemdp -> fetch();
-    if ($reqmdp != false) {
-        header("Location:CheckedAccount.php?");
-}
-else echo "<p> Erreur Mot de passe </p>";
-    
+if($os === "Windows")
+{
+    $db = new PDO('mysql:host=localhost;dbname=space', 'root', '');
 }
 
-else echo "<p> Erreur login</p>";
+elseif($os === "Mac")
+{
+    $db = new PDO('mysql:host=localhost;dbname=space', 'root', 'root');
+} 
+
+elseif($os === "Linux")
+{
+    $db = new PDO('mysql:host=localhost;dbname=space', 'phpmyadmin', 'handigital');
+    // echo getenv("HTTP_USER_AGENT");
+}
 
 
 
+$login = $_POST["login"];
+$password = $_POST["password"];
+
+$reponse = $db->query("SELECT * FROM user WHERE login_user='". $login. "'");
+// var_dump($reponse);
+$donnees = $reponse->fetch();
+// var_dump($donnees);
+if ($donnees != false) {
+    $reponse2 = $db->query("SELECT * FROM user WHERE login_user='" . $login. "' AND passw_user='". $password. "'");
+    $donnees2 = $reponse2->fetch();
+    if ($donnees2 != false) {
+        header("Location: CheckedAccount.php");
+    }
+    else{
+        echo "<h2>Mauvais Login</h2>";
+    }
+} else {
+    echo "<h2>Mauvais Password</h2>";
+}
+?>
+
+
+<a href="../Login.php">Retour</a>
+
+<?php
 
 require '../vue/footer.php';
 
