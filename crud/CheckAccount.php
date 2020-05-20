@@ -36,12 +36,13 @@ $password = $_POST["password"];
 $reponse = $db->query("SELECT * FROM user WHERE login_user='". $login. "'");
 // var_dump($reponse);
 $donnees = $reponse->fetch();
-// var_dump($donnees);
+// echo var_dump($donnees);
 if ($donnees != false) {
     $reponse2 = $db->query("SELECT * FROM user WHERE login_user='" . $login. "' AND passw_user='". $password. "'");
     $donnees2 = $reponse2->fetch();
+    // echo var_dump($donnees2);
     if ($donnees2 != false) {
-        header("Location:CheckedAccount.php");
+        header("Location:CheckedAccount.php?id=".$donnees2['id_user']);
     }
     else{
         echo "<h2>Mauvais Password</h2>";
