@@ -2,7 +2,39 @@
 
 require '../chargeauto.php';
 
+?>
 
+
+<!doctype html>
+
+<html lang="Fr-fr">
+  <head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <?php 
+    if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+      
+      echo  "<link rel='stylesheet' type='text/css' href='../css/main.css'/>
+      <link rel='stylesheet' media='(max-width: 992px)' href='../css/tablet.css'/>
+      <link rel='stylesheet' media='(max-width: 576px)' href='../css/smartphone.css'/>";
+    }
+    else
+    {
+	  echo  "<link rel='stylesheet' type='text/css' href='css/main.css'/>
+		<link rel='stylesheet' media='(max-width: 992px)' href='css/tablet.css'/>
+		<link rel='stylesheet' media='(max-width: 576px)' href='css/smartphone.css'/>";
+    }
+?> 
+
+		<title>Space Missions</title>
+
+  </head>
+
+  <body>
+
+<?php
 $user_agent = getenv("HTTP_USER_AGENT");
 
 if(strpos($user_agent, "Win") !== FALSE)
@@ -45,16 +77,20 @@ if ($donnees != false) {
         header("Location:CheckedAccount.php?id=".$donnees2['id_user']);
     }
     else{
-        echo "<h2>Mauvais Password</h2>";
+        echo " <article> 
+        <h2 style='background-color:red; border:2px white solid; width:30%; text-align:center; margin:auto; margin-top:4%;'> Votre Mot de Passe est Incorrect</h2>
+</article>";
     }
 } else {
-    echo "<h2>Mauvais Login</h2>";
+    echo "<article> 
+    <p> Votre Login est Incorrect</p>
+</article>";
 }
 ?>
 
-
-<a href="../Login.php">Retour</a>
-
+<div>
+<a href="../Login.php" style="font-size:18px; border:solid white 1px; background-color:black;">Retour à la page de connexion</a>
+</div>
 <?php
 
 require '../vue/footer.php';
