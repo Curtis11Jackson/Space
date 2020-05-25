@@ -5,7 +5,7 @@ require '../vue/header.php';
 ?>
 
 <div class="banner">
-  <h1 style="margin-bottom:4vh">Thank you for adding a comment <?php $tabloComment['fk_user']?></h1>
+  <h1 style="margin-bottom:4vh">Thank you for adding a comment</h1>
 </div>
 
 <?php
@@ -16,7 +16,7 @@ $user = $_POST['user'];
 $lieu = $_POST['lieu'];
 $id = 4;
 
-$tabloLieu = array(
+$tabloComment = array(
   "id_comment" => $id,    
   "text_comment" => $text,
   "date_comment" => $date,
