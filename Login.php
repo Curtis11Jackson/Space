@@ -12,8 +12,8 @@ require 'vue/header.php';
   <h1 style="margin-bottom:4vh">Space Exploration</h1>
 </div>
 
-<article style="width:60%; margin:auto; border:2px white solid;">
-  <video src="videos/Launch.mp4" style="width:540px; height:360px; margin:auto;" controls autoplay>
+<article style="width:60%; margin:auto; border:2px white solid; text-align:center;">
+  <video src="videos/Launch.mp4" style="width:540px; height:360px; margin-bottom: 10px;  " controls autoplay>
 </article>
 
 
