@@ -20,7 +20,7 @@ $lieu = $_POST['lieu'];
 $tabloComment = array(
     'id_comment' => $id,
     'text_comment' => $text,
-    'date' => $date,
+    'date_comment' => $date,
     'fk_user' => $user,
     'fk_lieu' => $lieu,
 );
