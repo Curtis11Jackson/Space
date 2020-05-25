@@ -51,23 +51,6 @@ public function get($id)
     }
 }
 
-public function getLog($login, $pass)
-{
-    $tabloDonnees = [];
-    if (is_string($login)) {
-        //on prépare la requete SELECT
-        $req = $this->_db->query("SELECT * FROM user 
-        WHERE login_user ='". $login."' AND passw_user ='".$pass."'");
-        // On récupère le résultat dans un tableau
-        while ($donnees = $req->fetch()) {
-          array_push($tabloDonnees, $donnees);
-        }
-        // retourner cet array
-        return $tabloDonnees;
-    }
-}
-
-
 public function delete($id)
 {
     // execute une requete DELETE pour supprimer un animal avec son id
