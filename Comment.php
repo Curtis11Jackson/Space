@@ -84,14 +84,14 @@ class Comment
     public function setFk_user($user)
     {
         if (is_string($user)) {
-            $this->_user_comment = $user;
+            $this->_fk_user = $user;
         }
     }
 
     public function setFk_lieu($lieu)
     {
         if (is_string($lieu)) {
-            $this->_lieu_comment = $lieu;
+            $this->_fk_lieu = $lieu;
         }
     }
 }
