@@ -83,14 +83,24 @@ class Comment
 
     public function setFk_user($user)
     {
-        if (is_string($user)) {
+        // if (is_string($user)) {
+        //     $this->_fk_user = $user;
+        // }
+        $user = (int) $user;
+
+        if ($user > 0) {
             $this->_fk_user = $user;
         }
     }
 
     public function setFk_lieu($lieu)
     {
-        if (is_string($lieu)) {
+        // if (is_string($lieu)) {
+        //     $this->_fk_lieu = $lieu;
+        // }
+        $lieu = (int) $lieu;
+
+        if ($lieu > 0) {
             $this->_fk_lieu = $lieu;
         }
     }
