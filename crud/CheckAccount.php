@@ -89,7 +89,7 @@ if ($donnees != false) {
 ?>
 
 <div>
-<a href="../Login.php" style="font-size:18px; border:solid white 1px; background-color:black;">Retour à la page de connexion</a>
+<a href="../index.php" style="font-size:18px; border:solid white 1px; background-color:black;">Retour à la page de connexion</a>
 </div>
 <?php
 
