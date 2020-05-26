@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 25 mai 2020 à 08:22
+-- Généré le :  mar. 26 mai 2020 à 07:24
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.4.0
 
@@ -36,7 +36,15 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `fk_user` int(11) NOT NULL,
   `fk_lieu` int(11) NOT NULL,
   PRIMARY KEY (`id_comment`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `comment`
+--
+
+INSERT INTO `comment` (`id_comment`, `text_comment`, `date_comment`, `fk_user`, `fk_lieu`) VALUES
+(3, 'R2D2 is so friendly', '2019-02-22', 1, 2),
+(4, 'Le pub de Tatouine sert des bieres d\'exception', '1850-06-12', 0, 3);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
