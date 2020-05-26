@@ -20,17 +20,17 @@ $lieu = $_GET['lieu'];
   <div class="col">
       <input type="hidden" id="id" name="id" value="<?php echo $id ?>" class="form-control">
     </div>
-    <div class="col">
+    <div class="col-4">
       <input type="text" id="text" name="text" value="<?php echo $text ?>" class="form-control">
     </div>
     <div class="col">
       <input type="date" id="date" name="date" value="<?php echo $date ?>" class="form-control" required>
     </div>
     <div class="col">
-      <input type="text" id="user" name="user" value="<?php echo $user ?>" class="form-control">
+      <input type="text" id="user" name="user" value="<?php echo $user ?>" class="form-control" required>
     </div>
     <div class="col">
-      <input type="text" id="lieu" name="lieu" value="<?php echo $lieu ?>" class="form-control">
+      <input type="text" id="lieu" name="lieu" value="<?php echo $lieu ?>" class="form-control" required>
     </div>
     <button type="submit" style ="margin-right: 3vw;"class="btn btn-primary">Save Comment</button>
   </div>

@@ -356,36 +356,6 @@
         >Voir la liste des outils</a>
       </div>
 </li>
-
-<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-        <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
-
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
-        <?php 
-            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='../Login.php'>";
-            }
-            else
-            {
-            echo "href='Login.php'>";
-            }
-        ?> 
-        >Log In</a>
-
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
-        <?php 
-            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='CreateUser.php'>";
-            }
-            else
-            {
-            echo "href='crud/CreateUser.php'>";
-            }
-        ?> 
-        >Sign Up</a>
-      </div>
-</li>
     </ul>
   </div>
 </nav>

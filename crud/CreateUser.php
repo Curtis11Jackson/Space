@@ -1,10 +1,97 @@
 <?php
-
 require '../identifier.php';
 require '../chargeauto.php';
-require '../vue/header.php';
-
 ?>
+
+
+<!doctype html>
+
+<html lang="Fr-fr">
+  <head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <?php 
+    if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+      
+      echo  "<link rel='stylesheet' type='text/css' href='../css/main.css'/>
+      <link rel='stylesheet' media='(max-width: 992px)' href='../css/tablet.css'/>
+      <link rel='stylesheet' media='(max-width: 576px)' href='../css/smartphone.css'/>";
+    }
+    else
+    {
+	  echo  "<link rel='stylesheet' type='text/css' href='css/main.css'/>
+		<link rel='stylesheet' media='(max-width: 992px)' href='css/tablet.css'/>
+		<link rel='stylesheet' media='(max-width: 576px)' href='css/smartphone.css'/>";
+    }
+?> 
+
+		<title>Space Missions</title>
+
+  </head>
+
+  <body>
+	<header>
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:black;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="background-color:white;"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+
+        <a class="nav-link" 
+        
+        <?php 
+    if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+      echo "href='../index.php' style='color:white;'><img src='../images/nasa.png'";
+    }
+    else
+    {
+	  echo "href='index.php' style='color:white;'><img src='images/nasa.png'";
+    }
+?> 
+        class="nasa" title="Home"></a>
+
+      </li>
+    
+
+<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
+        <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='../Login.php'>";
+            }
+            else
+            {
+            echo "href='Login.php'>";
+            }
+        ?> 
+        >Log In</a>
+
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
+        <?php 
+            if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
+              echo "href='CreateUser.php'>";
+            }
+            else
+            {
+            echo "href='crud/CreateUser.php'>";
+            }
+        ?> 
+        >Sign Up</a>
+      </div>
+</li>
+    </ul>
+  </div>
+</nav>
+
+</header>
 
 
 <div class="banner">
