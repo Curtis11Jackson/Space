@@ -11,7 +11,7 @@ $monOutRepo = new OutilRepository($db);
 
 $countOutil = $monOutRepo->getCountById();
 
-echo "<h3>Nunber of tools :" .$countOutil[0]. "</h3>";
+echo "<h3>Number of tools : " .$countOutil[0]. "</h3>";
 
 ?>
 <section style="display:flex; flex-wrap: wrap;">
