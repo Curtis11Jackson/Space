@@ -37,9 +37,7 @@ foreach ($tabloComment as $Comment) {
                     
                     </article>
                     <p style='width:25%;'><a href='DeleteLieu.php?id=".$Comment['id_lieu']."' style='font-size:20px;'>Delete this Place</a></p>
-                    <p style='width:25%;'><a href='UpdateLieu.php?id=".$Comment['id_lieu']."
-                    &nom=".$Comment['nom_lieu']."&topo=".$Comment['topo_lieu']."
-                    &gps=".$Comment['gps_lieu']."' style='font-size:20px;'>Update this Place</a></p>
+                    <p style='width:25%;'><a href='UpdateLieu.php?id=".$Comment['id_lieu']."&nom=".$Comment['nom_lieu']."&img=".$Comment['img_lieu']."&topo=".$Comment['topo_lieu']."&gps=".$Comment['gps_lieu']."' style='font-size:20px;'>Update this Place</a></p>
                     <p style='width:25%;'><a href='AjouterComment.php?id=".$Comment['id_lieu']."' style='font-size:20px;'>Review this Place</a></p>
                 
                     </article>";
