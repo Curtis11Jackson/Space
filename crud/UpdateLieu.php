@@ -40,7 +40,7 @@ $gps = $_GET['gps'];
     <label for="race">GPS</label>
     <input type="text" id="gps" name="gps" class="form-control" value="<?php echo $gps ?>" required>
   </div>
-  <div style="width:12%; border:1px solid black; margin:auto;">
+  <div style="width:12%; margin:auto;">
   <button type="submit" class="btn btn-primary" style="margin:auto;">Save Changes</button>
   </div>
 </form>
