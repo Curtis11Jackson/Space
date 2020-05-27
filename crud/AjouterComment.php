@@ -6,9 +6,13 @@ require '../vue/header.php';
 $monLieuRepo = new LieuRepository($db);
 
 $tabloLieu = $monLieuRepo->getListName();
+
+$monUserRepo = new UserRepository($db);
+
+$tabloUser = $monUserRepo->getListName();
+
+
 ?>
-
-
 <div class="banner">
     <h1 style="margin-bottom:4vh">Add a comment</h1>
 </div>
@@ -24,7 +28,15 @@ $tabloLieu = $monLieuRepo->getListName();
     </div>
     <div class="form-group">
         <label for="user" style="color:white; background-color:black;">Your Pseudo</label>
-        <input type="text" id="user" name="user" class="form-control" placeholder="Write your Pseudo">
+        <select id="inputStateUser" class="form-control" name="user">
+            <?php $i = 1;
+            foreach ($tabloUser as $User) {
+                echo "<option value=$i>" . $User['nom_user'] . "</option>";
+                $i++;
+            }
+            ?>
+        </select>
+    
     </div>
     <div class="form-group">
         <label for="inputState" style="color:white; background-color:black;">Place to review</label>
