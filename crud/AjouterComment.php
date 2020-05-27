@@ -27,7 +27,7 @@ $tabloLieu = $monLieuRepo->getListName();
         <input type="text" id="user" name="user" class="form-control" placeholder="Write your Pseudo">
     </div>
     <div class="form-group">
-        <label for="inputState" style="color:white; background-color:black;">Place where the mineral is</label>
+        <label for="inputState" style="color:white; background-color:black;">Place to review</label>
         <select id="inputState" class="form-control" name="lieu">
             <?php $i = 1;
             foreach ($tabloLieu as $Lieu) {
