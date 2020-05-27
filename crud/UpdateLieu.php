@@ -25,19 +25,19 @@ $gps = $_GET['gps'];
      <input type="hidden" id="id" name="id" class="form-control"  value="<?php echo $id ?>" >
   </div>
   <div class="form-group">
-    <label for="nom">Place Name</label>
+    <label for="nom" style="background:black;color:white; padding:5px; border-radius: 25px;">Place Name</label>
     <input type="text" id="nom" name="nom" class="form-control"  value="<?php echo $nom ?>" required>
   </div>
   <div class="form-group">
-    <label for="img">Image of the Place</label>
+    <label for="img"  style="background:black;color:white; padding:5px; border-radius: 25px;">Image of the Place</label>
     <input type="text" class="form-control" id="img" class="img" name="img" value="<?php echo $img ?>" required >
   </div>
   <div class="form-group">
-    <label for="prenom">Topography</label>
+    <label for="prenom"  style="background:black;color:white; padding:5px; border-radius: 25px;">Topography</label>
     <input type="text" id="topo" name="topo" class="form-control"  value="<?php echo $topo ?>" required>
   </div>
   <div class="form-group">
-    <label for="race">GPS</label>
+    <label for="race"  style="background:black;color:white; padding:5px; border-radius: 25px;">GPS</label>
     <input type="text" id="gps" name="gps" class="form-control" value="<?php echo $gps ?>" required>
   </div>
   <div style="width:12%; margin:auto;">
