@@ -18,7 +18,8 @@ class CommentRepository
   public function add(Comment $comment)
   {
     //prepare une requete d'ajout de commentaire
-    $request = $this->_db->prepare("INSERT INTO comment(text_comment, date_comment, fk_user, fk_lieu) 
+    $request = $this->_db->prepare("INSERT INTO comment(text_comment, 
+    date_comment, fk_user, fk_lieu) 
     VALUES (:text, :date, :user, :lieu)");
 
     // tableau -> execute la requette   
@@ -33,7 +34,7 @@ class CommentRepository
     $comment->hydrate(array(
       'id_comment' => $this->_db->lastInsertId()
     ));
-  }
+}
 
   public function getComment($id)
 {
@@ -82,6 +83,24 @@ public function getListName()
     // retourner cet array
     return $tabloDonnees;
 }
+
+public function GetLieuUser()
+{
+  $tabloLieuUser = [];
+        //on prépare la requete SELECT
+        $request = $this->_db->query("SELECT * FROM comment 
+INNER JOIN user ON comment.fk_user = user.id_user 
+INNER JOIN lieu ON comment.fk_lieu = lieu.id_lieu");
+        // On récupère le résultat dans un tableau
+        
+        while ($donnees = $request->fetch()) {
+          array_push($tabloLieuUser, $donnees);
+        }
+        //echo var_dump($tabloAnimalVegetal);
+        return $tabloLieuUser;
+}
+
+
 
 }
 
