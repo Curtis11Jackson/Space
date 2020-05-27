@@ -30,7 +30,7 @@ $gps = $_GET['gps'];
   </div>
   <div class="form-group">
     <label for="img">Image of the Place</label>
-    <input type="text" class="form-control" id="img" class="img" name="img" >
+    <input type="text" class="form-control" id="img" class="img" name="img" value="<?php echo $img ?>" required >
   </div>
   <div class="form-group">
     <label for="prenom">Topography</label>
