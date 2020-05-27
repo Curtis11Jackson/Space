@@ -22,7 +22,7 @@ $tableauLieu = $monLieuRepo->getListName();
 foreach ($tableauLieu as $Lieux) {
 
 
-    echo " <article style='border:1px solid white; width:50%;'>
+    echo " <article style='border:1px solid white; width:50%;  margin-bottom:2%;'>
                 <h3>" . $Lieux['nom_lieu'] . "</h3>
                 <img style='display:block; margin-left:auto; margin-right:auto;' src=../images/". $Lieux['img_lieu']." width='320' height='200' ' "." </img>
                 <p style='width:35%; margin:auto;'> Numéro id : ". $Lieux['id_lieu'] . "</p>
