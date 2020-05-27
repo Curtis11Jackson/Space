@@ -8,26 +8,26 @@ require '../vue/header.php';
 
 
 <?php
-$monLieuRepo = new LieuRepository($db);
 
-$countLieu = $monLieuRepo->getCountById();
+$monCommentRepo = new CommentRepository($db);
 
-echo "<h3> Number of Places : " .$countLieu[0]. "</h3>";
+$countComment = $monCommentRepo->getCountById();
+
+echo "<h3> Number of comments : " .$countComment[0]. "</h3>";
 
 ?>
 <section style="display:flex; flex-wrap: wrap;">
 <?php
 
-$monCommentRepo = new CommentRepository($db);
 $tabloComment = $monCommentRepo->GetLieuUser();
 //echo var_dump($tabloComment);
 
 foreach ($tabloComment as $Comment) {
         echo " <article style='border:1px solid white; width:50%;  margin-bottom:2%;'>
-                    <h3>" . $Comment['text_comment'] . "</h3>
+                    <h3>" . $Comment['nom_lieu'] . "</h3>
                     <img style='display:block; margin-left:auto; margin-right:auto;' src=../images/". $Comment['img_lieu']." width='320' height='200' ' "." </img>
                     <p style='width:35%; margin:auto;'> Date du commentaire : ". $Comment['date_comment'] . "</p>
-                    <p style='width:35%; margin:auto;'> Lieu : ". $Comment['nom_lieu'] . "</p>
+                    <p style='width:35%; margin:auto;'> Commentaire : ". $Comment['text_comment'] . "</p>
                     <p style='width:35%; margin:auto; margin-bottom:2%;'> Utilisateur : ". $Comment['nom_user'] ."</p>
                     <p style='width:25%;'><a href='DeleteLieu.php?id=".$Comment['id_lieu']."' style='font-size:20px;'>Delete this Place</a></p>
                     <p style='width:25%;'><a href='UpdateLieu.php?id=".$Comment['id_lieu']."

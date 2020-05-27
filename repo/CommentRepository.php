@@ -101,6 +101,16 @@ INNER JOIN lieu ON comment.fk_lieu = lieu.id_lieu");
 }
 
 
+public function getCountById()
+{
+    $tabloCount = [];
+    //execute une requete SELECT qui récupère uniquement les noms de chaque recette
+    $req = $this->_db->query("SELECT COUNT(*) FROM comment");
+    $tabloCount = $req->fetch();
+
+    return $tabloCount;
+}
+
 
 }
 
