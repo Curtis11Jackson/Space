@@ -97,39 +97,42 @@ require '../chargeauto.php';
 <div class="banner">
 	<h1 style="margin-bottom:4vh">Space Exploration</h1>
 </div>
-<article>
-<h2 style="color:white; padding-bottom:5px; margin-top:4vh; text-align:center; background-color:black; width:20%; margin:auto; border-radius: 25px;">
-Create an account
-</h2>
-  
-  <form class="w-25" method="POST" action="AddedUser.php" style="margin:auto; margin-top:2%;">
-		 <div class="form-group">
-    <label for="prenom"style="background:black;color:white; padding:5px; border-radius: 25px;">Prénom</label>
-    <input  type="text" id="prenom" name="prenom" class="form-control" placeholder="Renseignez votre Prénom" required>
-  </div>
-  <div class="form-group">
-    <label for="nom"style="background:black;color:white; padding:5px; border-radius: 25px;">Nom</label>
-    <input type="text" id="nom" name="nom" class="form-control" placeholder="Renseignez votre Nom" required>
-  </div>
-  <div class="form-group">
-    <label for="mail" style="background:black;color:white; padding:5px; border-radius: 25px;">Email</label>
-    <input type="text" id="mail" name="mail" class="form-control" placeholder="Renseignez votre Email" required>
-  </div>
-  <div class="form-group">
-    <label for="login"style="background:black;color:white; padding:5px; border-radius: 25px;">Login</label>
-    <input type="text" id="login" name="login" class="form-control" placeholder="Renseignez votre Login" required>
-  </div>
-  <div class="form-group">
-    <label for="password"style="background:black;color:white; padding:5px; border-radius: 25px;">Mot de Passe</label>
-    <input type="password" id="password" name="password" class="form-control" placeholder="Renseignez votre Mot de Passe" required>
-  </div>
-  <div style="width:40%; margin:auto;">
-  <button type="submit" class="btn btn-primary" style="margin:auto;">Créer mon compte</button>
-  </div>
-  </form>
-          </article>
-  <article>
-  <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="900">
+
+<section style="display:flex; flex-wrap: wrap;">
+
+<article style='border:1px solid white; width:55%;  margin-bottom:2%;'>
+  <h2 style="color:white; padding-bottom:5px; margin-top:4vh; text-align:center; background-color:black; width:20%; margin:auto; border-radius: 25px;">
+  Create an account
+  </h2>
+    
+    <form class="w-25" method="POST" action="AddedUser.php" style="margin:auto; margin-top:2%;">
+      <div class="form-group">
+      <label for="prenom"style="background:black;color:white; padding:5px; border-radius: 25px;">Prénom</label>
+      <input  type="text" id="prenom" name="prenom" class="form-control" placeholder="Renseignez votre Prénom" required>
+    </div>
+    <div class="form-group">
+      <label for="nom"style="background:black;color:white; padding:5px; border-radius: 25px;">Nom</label>
+      <input type="text" id="nom" name="nom" class="form-control" placeholder="Renseignez votre Nom" required>
+    </div>
+    <div class="form-group">
+      <label for="mail" style="background:black;color:white; padding:5px; border-radius: 25px;">Email</label>
+      <input type="text" id="mail" name="mail" class="form-control" placeholder="Renseignez votre Email" required>
+    </div>
+    <div class="form-group">
+      <label for="login"style="background:black;color:white; padding:5px; border-radius: 25px;">Login</label>
+      <input type="text" id="login" name="login" class="form-control" placeholder="Renseignez votre Login" required>
+    </div>
+    <div class="form-group">
+      <label for="password"style="background:black;color:white; padding:5px; border-radius: 25px;">Mot de Passe</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Renseignez votre Mot de Passe" required>
+    </div>
+    <div style="width:40%; margin:auto;">
+    <button type="submit" class="btn btn-primary" style="margin:auto;">Créer mon compte</button>
+    </div>
+    </form>
+</article>
+<article style='border:1px solid white; width:45%;  margin-bottom:2%;'>
+  <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="1200">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -155,8 +158,8 @@ Create an account
             <span class="sr-only">Next</span>
         </a>
     </div>
-          </article>
-
+</article>
+          </section>
 
 <?php
 
