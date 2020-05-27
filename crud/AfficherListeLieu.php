@@ -26,13 +26,13 @@ foreach ($tabloComment as $Comment) {
         echo " <article style='border:1px solid white; width:50%;  margin-bottom:2%;'>
                     <h3>" . $Comment['nom_lieu'] . "</h3>
                     <img style='display:block; margin-left:auto; margin-right:auto;' src=../images/". $Comment['img_lieu']." width='320' height='200' ' "." </img>
-                    <p style='width:35%; margin:auto;'> Topography : ". $Comment['topo_lieu'] . "</p>
+                    <p style='width:35%; margin:auto; margin-top:2%;'> Topography : ". $Comment['topo_lieu'] . "</p>
                     <p style='width:35%; margin:auto;'> GPS : ". $Comment['gps_lieu'] . "</p>
 
                     <h4 style='color:white; text-align:center;margin-top:2%;'> Reviews </h4>
-                    <article style='border:1px solid white; width:50%;margin:auto; width:50%; margin-bottom:2%; margin-top:2%;'>
+                    <article style='border:2px solid white; width:50%;margin:auto; width:50%; margin-bottom:2%; margin-top:2%; background-color:#001f3f;'>
                     <h6 style='color:white; text-align:center; font-size:22px;'>". $Comment['nom_user'] ."</h6>
-                    <p style='width:80%; margin:auto;'> Date du commentaire : ". $Comment['date_comment'] . "</p>
+                    <p style='width:80%; margin:auto; margin-bottom:2%;'> Date du commentaire : ". $Comment['date_comment'] . "</p>
                     <p style='width:80%; margin:auto; margin-bottom:2%;'> Commentaire : ". $Comment['text_comment'] . "</p>
                     
                     </article>
