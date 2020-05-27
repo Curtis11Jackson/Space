@@ -37,6 +37,9 @@ else{
 }
 ?>
 
+<article>
+<p style="margin:auto; width:50%; margin-bottom:2vh;">You are signed in, you can now create, update and delete articles in the database.</p></article>
+
 <div class="justify-content-center shadow  rounded">
 	<div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
 		<div class="carousel-inner justify-content-center">

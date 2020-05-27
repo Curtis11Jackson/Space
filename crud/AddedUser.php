@@ -26,7 +26,7 @@ $monUserRepo = new UserRepository($db);
 $monUserRepo -> add($myUser);
 ?>
 <div class="banner">
-  <h1 style="margin-bottom:4vh;">Thank you <?php echo $UserTable['login_user']. " " ?>for creating an account</h1>
+  <h1 style="margin-bottom:4vh;">Thank you <?php echo $UserTable['login_user']. " " ?>for creating an account. Now that you have created an account you have full access to the database.</h1>
 </div>
 <!-- <?php
   // echo " <article>
