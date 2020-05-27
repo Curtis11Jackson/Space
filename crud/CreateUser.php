@@ -97,7 +97,7 @@ require '../chargeauto.php';
 <div class="banner">
 	<h1 style="margin-bottom:4vh">Space Exploration</h1>
 </div>
-
+<article>
 <h2 style="color:white; padding-bottom:5px; margin-top:4vh; text-align:center; background-color:black; width:20%; margin:auto; border-radius: 25px;">
 Create an account
 </h2>
@@ -127,6 +127,36 @@ Create an account
   <button type="submit" class="btn btn-primary" style="margin:auto;">Créer mon compte</button>
   </div>
   </form>
+          </article>
+  <article>
+  <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="900">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block mx-auto img-fluid" src="../images/probe1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block mx-auto img-fluid" src="../images/probe2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block mx-auto img-fluid" src="../images/probe3.jpg" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+          </article>
+
 
 <?php
 
