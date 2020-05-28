@@ -65,11 +65,11 @@ require '../chargeauto.php';
         <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"
         <?php
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-              echo "href='../Login.php'>";
+              echo "href='../index.php'>";
             }
             else
             {
-            echo "href='Login.php'>";
+            echo "href='index.php'>";
             }
         ?>
         >Log In</a>
@@ -101,7 +101,8 @@ require '../chargeauto.php';
 <section style="display:flex; flex-wrap: wrap;">
 
 <article style='border:1px solid white; width:55%;  margin-bottom:2%;'>
-  <h2 style="color:white; padding-bottom:5px; margin-top:4vh; text-align:center; background-color:black; width:20%; margin:auto; border-radius: 25px;">
+  <h2 style="color:white; padding-bottom:5px; margin-top:4vh; text-align:center; 
+  background-color:black; width:80%; margin:auto; border-radius: 25px;">
   Create an account
   </h2>
 
@@ -126,18 +127,18 @@ require '../chargeauto.php';
       <label for="password"style="background:black;color:white; padding:5px; border-radius: 25px;">Mot de Passe</label>
       <input type="password" id="password" name="password" class="form-control" placeholder="Renseignez votre Mot de Passe" required>
     </div>
-    <div style="width:40%; margin:auto;">
+    <div style="width:80%; margin:auto; margin-bottom: 2%;">
     <button type="submit" class="btn btn-primary" style="margin:auto;">Créer mon compte</button>
     </div>
     </form>
 </article>
-<article style='border:1px solid white; width:45%;margin-bottom:auto; margin-top: auto;' >
+<article style='width:45%;margin-bottom:auto; margin-top: auto;' >
   <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="1200">
-        <ol class="carousel-indicators">
+        <!-- <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+        </ol> -->
         <div class="carousel-inner" style="margin-left:10vw;">
             <div class="carousel-item active">
                 <img class="d-block mx-auto img-fluid" src="../images/probe1.jpg" alt="First slide">
@@ -149,14 +150,14 @@ require '../chargeauto.php';
                 <img class="d-block mx-auto img-fluid" src="../images/probe3.jpg" alt="Third slide">
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <!-- <a class="carousel-control-top" href="#carouselExampleControls" role="button" data-slide="top">
+            <span class="carousel-control-top-icon bg-dark rounded-circle" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <a class="carousel-control-bottom" href="#carouselExampleControls" role="button" data-slide="bottom">
+            <span class="carousel-control-bottom-icon bg-dark rounded-circle" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-        </a>
+        </a> -->
     </div>
 </article>
           </section>
