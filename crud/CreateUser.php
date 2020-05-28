@@ -131,14 +131,14 @@ require '../chargeauto.php';
     </div>
     </form>
 </article>
-<article style='border:1px solid white; width:45%;  margin-bottom:auto; margin-top: auto;'>
+<article style='border:1px solid white; width:45%;margin-bottom:auto; margin-top: auto;' >
   <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="1200">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="margin-left:10vw;">
             <div class="carousel-item active">
                 <img class="d-block mx-auto img-fluid" src="../images/probe1.jpg" alt="First slide">
             </div>
