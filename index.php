@@ -96,16 +96,16 @@ require 'chargeauto.php';
 
 
 <div class="banner">
-  <h1 style="margin-bottom:4vh">Space Exploration</h1>
+  <h1 style="margin-bottom:2vh;">Space Exploration</h1>
 </div>
 
-<article style="width:60%; margin:auto; border:2px white solid; text-align:center;">
-  <video src="videos/Launch.mp4" style="width:540px; height:360px; margin-bottom: 10px;  " controls autoplay>
+<article style="width:60%; height:50vh; margin:auto; border:2px white solid; text-align:center; background-image:url('images/artemis.gif'); background-position:center;">
+  <!-- <video src="videos/Launch.mp4" style="width:540px; height:360px; margin-bottom: 10px;  " controls autoplay> -->
 </article>
 
 
 
-<h2 style="color:white; margin-top:4vh; text-align:center;">Log In</h2>
+<h2 style="color:white;text-align:center;">Log In</h2>
 
 <form class="w-25" method="POST" action="crud/CheckAccount.php" style="margin:auto;">
   <div class="form-group">
