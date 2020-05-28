@@ -11,10 +11,10 @@ require '../chargeauto.php';
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-    <?php 
+
+    <?php
     if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
-      
+
       echo  "<link rel='stylesheet' type='text/css' href='../css/main.css'/>
       <link rel='stylesheet' media='(max-width: 992px)' href='../css/tablet.css'/>
       <link rel='stylesheet' media='(max-width: 576px)' href='../css/smartphone.css'/>";
@@ -25,7 +25,7 @@ require '../chargeauto.php';
 		<link rel='stylesheet' media='(max-width: 992px)' href='css/tablet.css'/>
 		<link rel='stylesheet' media='(max-width: 576px)' href='css/smartphone.css'/>";
     }
-?> 
+?>
 
 		<title>Space Missions</title>
 
@@ -42,9 +42,9 @@ require '../chargeauto.php';
     <ul class="navbar-nav">
       <li class="nav-item">
 
-        <a class="nav-link" 
-        
-        <?php 
+        <a class="nav-link"
+
+        <?php
     if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
       echo "href='../index.php' style='color:white;'><img src='../images/nasa.png'";
     }
@@ -52,18 +52,18 @@ require '../chargeauto.php';
     {
 	  echo "href='index.php' style='color:white;'><img src='images/nasa.png'";
     }
-?> 
+?>
         class="nasa" title="Home"></a>
 
       </li>
-    
+
 
 <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" style="color:white;"  href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
         <div class="dropdown-menu" style="background-color:black;" aria-labelledby="navbarDropdownMenuLink">
 
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
-        <?php 
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"
+        <?php
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
               echo "href='../Login.php'>";
             }
@@ -71,11 +71,11 @@ require '../chargeauto.php';
             {
             echo "href='Login.php'>";
             }
-        ?> 
+        ?>
         >Log In</a>
 
-        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;" 
-        <?php 
+        <a class="dropdown-item bg-primary" style="color:white;"  style="background-color:black;"
+        <?php
             if ( (explode("/",$_SERVER['PHP_SELF'])[1] == "Space") && (explode("/",$_SERVER['PHP_SELF'])[2] == "crud") ) {
               echo "href='CreateUser.php'>";
             }
@@ -83,7 +83,7 @@ require '../chargeauto.php';
             {
             echo "href='crud/CreateUser.php'>";
             }
-        ?> 
+        ?>
         >Sign Up</a>
       </div>
 </li>
@@ -104,7 +104,7 @@ require '../chargeauto.php';
   <h2 style="color:white; padding-bottom:5px; margin-top:4vh; text-align:center; background-color:black; width:20%; margin:auto; border-radius: 25px;">
   Create an account
   </h2>
-    
+
     <form class="w-25" method="POST" action="AddedUser.php" style="margin:auto; margin-top:2%;">
       <div class="form-group">
       <label for="prenom"style="background:black;color:white; padding:5px; border-radius: 25px;">Prénom</label>
@@ -131,7 +131,7 @@ require '../chargeauto.php';
     </div>
     </form>
 </article>
-<article style='border:1px solid white; width:45%;  margin-bottom:2%;'>
+<article style='border:1px solid white; width:45%;  margin-bottom:auto; margin-top: auto;'>
   <div id="carouselExampleControls" class="carousel vert slide" data-ride="carousel" data-interval="1200">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
