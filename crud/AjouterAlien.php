@@ -8,6 +8,10 @@ require '../vue/header.php';
   <h1 style="margin-bottom:4vh">Add aliens</h1>
 </div>
 
+<article style="width:25%; height:20vh; margin:auto; border:2px white solid; text-align:center; background-image:url('../images/vemon.gif'); background-position:cover;">
+  <!-- <video src="videos/Launch.mp4" style="width:540px; height:360px; margin-bottom: 10px;  " controls autoplay> -->
+</article>
+
 <form class="w-75" method="POST" action="ScriptAjoutAlien.php" style="margin:auto;">
 		 <div class="form-group">
     <label for="nom" style="color:white; background-color:black;">Alien's Name</label>
